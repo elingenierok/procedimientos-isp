@@ -1,4 +1,3 @@
-
 # [NOMBRE DEL PROCEDIMIENTO] ([CÓDIGO-000])
 
 **Norma ISO 9001:2015 - Cláusula [X.X]** | **Estado:** Borrador / Aprobado | **Versión:** 0.1
@@ -43,3 +42,31 @@ graph TD;
     A[Inicio del Proceso] --> B{¿Evaluación OK?};
     B -- Sí --> C[Aprobar y Ejecutar];
     B -- No --> D[Notificar Excepción];
+```
+
+---
+
+## 5. Gestión de Excepciones
+
+!!! warning "[Título de Situación Atípica 1]"
+    **Escenario:** [Descripción de la falla o situación poco probable].
+    **Acción Correctiva:** [Pauta clara de lo que se debe hacer para solucionar].
+
+!!! failure "[Título de Situación Excluyente 2]"
+    **Escenario:** [Condición que frena o cancela el proceso].
+    **Acción Correctiva:** [Instrucción de escalamiento o derivación].
+
+---
+
+## 6. Indicadores de Gestión (KPIs)
+
+* **[Nombre Indicador 1]:** (Fórmula de cálculo) | **Meta:** [e.g. $\ge 95\%$]
+* **[Nombre Indicador 2]:** (Fórmula de cálculo) | **Meta:** [e.g. $\le 2$ días]
+
+---
+
+## 7. Historial de Control de Cambios
+
+| Versión | Fecha | Descripción de la Modificación | Autor |
+| :--- | :--- | :--- | :--- |
+| 0.1 | 08/08/2026 | Confección del borrador inicial | [Área Emisora] |
