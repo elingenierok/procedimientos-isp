@@ -1,0 +1,36 @@
+site_name: Portal de Procedimientos - ISP
+site_description: Documentación operativa estandarizada
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - tables
+
+nav:
+  - Inicio: index.md
+  - Suministros y Logística:
+      - PR-COM-001 Compras: suministros-logistica/PR-COM-001.md
+      - PR-REC-001 Recupero de Equipos: suministros-logistica/PR-REC-001.md
