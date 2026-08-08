@@ -50,64 +50,7 @@
 
 ## 4. Diagrama de Flujo del Proceso
 
-```mermaid
-graph TD
-    subgraph AS[Área Solicitante]
-        A1[Solicitud ingresada con justificación]
-        A2[Recibe devolución por falta de info]
-        A3[Recibe bien / insumo]
-        A4[Pruebas de funcionamiento y verificación]
-        A5{¿Aprueba solicitud?}
-    end
-
-    subgraph AE[Área Especializada / Técnica]
-        B1[Verifica disponibilidad y análisis técnico]
-        B2[Proceso Interno VER]
-    end
-
-    subgraph COM[Compras]
-        C1[Analiza solicitud]
-        C2{¿Acompañado por informe técnico?}
-        C3{¿Corresponde a Compras?}
-        C4[Verifica disponibilidad en almacén]
-        C5{¿Dispone de lo solicitado?}
-        C6[Solicita cotizaciones a proveedores]
-        C7[Emisión de OC con cuadro comparativo]
-        C8[Recibe confirmación de Finanzas y avisa a Solicitante]
-        C9[Seguimiento al proveedor]
-        C10[Control de empaque, cantidades e integridad visual]
-        C11[Finaliza Solicitud y OC en ERP]
-        C12[Proceso Interno: Reclamo de Insumo]
-    end
-
-    subgraph PROV[Proveedor]
-        P1[Emite cotizaciones y propuestas comerciales]
-    end
-
-    subgraph FIN[Finanzas]
-        F1[Revisa presupuestos e informes / Decide propuesta]
-        F2[Proceso Interno: Pago a Proveedores]
-    end
-
-    A1 --> C1
-    C1 --> C2
-    C2 -- No --> C3
-    C2 -- Sí --> B1
-    B1 --> B2 --> C5
-    C3 -- No --> A2
-    C3 -- Sí --> C4
-    C4 --> C5
-    C5 -- Sí --> A3
-    C5 -- No --> C6
-    C6 --> P1
-    P1 --> F1
-    F1 --> F2
-    F2 --> C7
-    C7 --> C8 --> C9 --> C10 --> A3
-    A3 --> A4 --> A5
-    A5 -- Sí --> C11
-    A5 -- No --> C12
-```
+![Diagrama de Flujo de Compras](../../img/PR-COM/FLUJO-COM.png)
 
 ---
 
