@@ -36,11 +36,9 @@ extra_css:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.def_mermaid_code_format
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
   - tables
 
 nav:
