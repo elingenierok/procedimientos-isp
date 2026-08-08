@@ -1,36 +1,51 @@
-site_name: Portal de Procedimientos - ISP
-site_description: Documentación operativa estandarizada
+site_name: Obercom - Portal de Procedimientos
+site_description: Documentación oficial estandarizada de Obercom
 
 theme:
   name: material
   language: es
+  font:
+    text: Raleway
+    code: Roboto Mono
   palette:
     - media: "(prefers-color-scheme: light)"
-      primary: indigo
-      accent: blue
+      scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Modo oscuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Modo claro
   features:
     - navigation.indexes
     - navigation.top
+    - navigation.instant
     - search.suggest
     - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.def_mermaid_code_format
   - tables
 
 nav:
   - Inicio: index.md
+  - Plantilla Base: plantilla-base.md
   - Suministros y Logística:
       - PR-COM-001 Compras: suministros-logistica/PR-COM-001.md
       - PR-REC-001 Recupero de Equipos: suministros-logistica/PR-REC-001.md
