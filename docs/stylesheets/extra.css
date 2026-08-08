@@ -1,1 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
+:root {
+  /* Tipografía Obercom */
+  --md-text-font: 'Raleway', sans-serif;
+  --md-code-font: 'Roboto Mono', monospace;
+
+  /* Paleta Obercom - Modo Claro */
+  --md-primary-fg-color:        #00205B; /* Pantone 281C */
+  --md-primary-fg-color--light: #00338A;
+  --md-primary-fg-color--dark:  #001438;
+
+  --md-accent-fg-color:         #41B6E6; /* Pantone 298C */
+  --md-accent-fg-color--transparent: rgba(65, 182, 230, 0.15);
+}
+
+/* Paleta Obercom - Modo Oscuro */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #00205B;
+  --md-accent-fg-color:         #41B6E6;
+  --md-default-bg-color:        #091221;
+}
+
+/* Encabezados */
+.md-typeset h1, 
+.md-typeset h2, 
+.md-typeset h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #00205B;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: #41B6E6;
+}
+
+/* Estilo para Tablas RACI e Indicadores */
+.md-typeset table:not([class]) {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: #00205B;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: rgba(65, 182, 230, 0.08);
+}
+
+/* Cajas de Alertas y Excepciones */
+.md-typeset .admonition {
+  border-left-width: 4px;
+  border-radius: 4px;
+}
