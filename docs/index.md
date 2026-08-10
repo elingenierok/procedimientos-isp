@@ -1,53 +1,40 @@
 # Portal de Procedimientos Operativos - Obercom
 
-Bienvenido al centro de documentación oficial. Utiliza la red interactiva de procesos o el menú lateral para acceder a la documentación estandarizada.
+Bienvenido al centro de documentación oficial. Navega a través de la red jerárquica de procesos para acceder a cada documento estandarizado.
 
-**Mapa Interactivo de Procesos**
+```mermaid
+graph TD
+    %% Estilos Neón para Fondo Oscuro
+    classDef area fill:#0d1117,stroke:#00f3ff,stroke-width:3px,color:#00f3ff,font-weight:bold;
+    classDef proceso fill:#0d1117,stroke:#39ff14,stroke-width:2px,color:#39ff14,font-weight:bold;
+    classDef aislado fill:#0d1117,stroke:#ff007f,stroke-width:2px,color:#ff007f;
 
-<div id="network-map" style="height: 480px; width: 100%; border: 1px solid #41B6E6; border-radius: 8px; background-color: #0f172a; margin-top: 15px; margin-bottom: 20px;"></div>
+    %% Nivel 1: Área Principal
+    SL[SUMINISTROS Y LOGÍSTICA]:::area
 
-<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-<script>
-  // Definición de las burbujas (Nodos)
-  const nodes = new vis.DataSet([
-    { id: 1, label: 'PR-COM-001\nCompras', shape: 'dot', size: 30, color: { background: '#00205B', border: '#41B6E6' }, font: { color: '#ffffff', face: 'Raleway', size: 14 }, url: 'suministros-logistica/PR-COM-001/' },
-    { id: 2, label: 'PR-PEDT-001\nPedidos Técnicos', shape: 'dot', size: 30, color: { background: '#00205B', border: '#41B6E6' }, font: { color: '#ffffff', face: 'Raleway', size: 14 }, url: 'suministros-logistica/PR-PEDT-001/' },
-    { id: 3, label: 'PR-REC-001\nRecupero de Equipos', shape: 'dot', size: 30, color: { background: '#00205B', border: '#41B6E6' }, font: { color: '#ffffff', face: 'Raleway', size: 14 }, url: 'suministros-logistica/PR-REC-001/' },
-    { id: 4, label: 'PR-AIS-001\nProceso Aislado', shape: 'dot', size: 22, color: { background: '#334155', border: '#94a3b8' }, font: { color: '#ffffff', face: 'Raleway', size: 12 }, url: '#' }
-  ]);
+    %% Nivel 2: Procesos Descendientes
+    PEDT[PR-PEDT-001<br>Pedidos Técnicos]:::proceso
+    REC[PR-REC-001<br>Recupero de Equipos]:::proceso
+    ALM[PR-ALM-001<br>Inventario Físico]:::aislado
 
-  // Definición de conexiones entre procesos
-  const edges = new vis.DataSet([
-    { from: 2, to: 1, label: 'Insumos faltantes', color: { color: '#41B6E6' }, font: { color: '#94a3b8', size: 11, align: 'middle' }, arrows: 'to' },
-    { from: 2, to: 3, label: 'Equipos devueltos', color: { color: '#41B6E6' }, font: { color: '#94a3b8', size: 11, align: 'middle' }, arrows: 'to' }
-  ]);
+    %% Nivel 3: Aprovisionamiento y Compras
+    COM[PR-COM-001<br>Compras]:::proceso
 
-  // Parámetros de física y comportamiento visual
-  const container = document.getElementById('network-map');
-  const data = { nodes: nodes, edges: edges };
-  const options = {
-    physics: {
-      enabled: true,
-      barnesHut: { gravConstant: -2500, springLength: 120, centralGravity: 0.3 }
-    },
-    nodes: { borderWidth: 2 },
-    interaction: { hover: true, zoomView: true, dragView: true }
-  };
+    %% Jerarquía Principal (Líneas de Cascada)
+    SL ==> PEDT
+    SL ==> REC
+    SL ==> ALM
 
-  // Inicialización de la red
-  const network = new vis.Network(container, data, options);
+    %% Enredaderas Cruzadas (Relaciones de Interconexión)
+    PEDT -.->|Falta de Stock| COM
+    PEDT -.->|Equipo Fallado| REC
+    REC -.->|Baja Definitiva| COM
 
-  // Redirección al hacer clic en cualquier burbuja
-  network.on("click", function (params) {
-    if (params.nodes.length > 0) {
-      const nodeId = params.nodes[0];
-      const nodeData = nodes.get(nodeId);
-      if (nodeData.url && nodeData.url !== '#') {
-        window.location.href = nodeData.url;
-      }
-    }
-  });
-</script>
+    %% Hipervínculos a Documentos
+    click PEDT "suministros-logistica/PR-PEDT-001/"
+    click COM "suministros-logistica/PR-COM-001/"
+    click REC "suministros-logistica/PR-REC-001/"
+```
 
 ---
 
