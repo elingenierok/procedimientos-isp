@@ -41,8 +41,8 @@ markdown_extensions:
 
 nav:
   - Inicio: index.md
-  - Plantilla Base: plantilla-base.md
   - Suministros y Logística:
       - PR-COM-001 Compras: suministros-logistica/PR-COM-001.md
       - PR-REC-001 Recupero de Equipos: suministros-logistica/PR-REC-001.md
       - PR-PEDT-001 Pedidos Técnicos: suministros-logistica/PR-PEDT-001.md
+      - PR-PEDS-001 Pedidos Sucursales: suministros-logistica/PR-PEDS-001.md
