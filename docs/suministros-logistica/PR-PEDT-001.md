@@ -78,14 +78,17 @@
 
 ## 6. Indicadores de Gestión (KPIs)
 
-* **Cantidad de Pedidos Mensuales:**  
-  * **Descripción:** Contabilización del total de pedidos realizados en el transcurso de 1 mes.
-* **Cantidad de Pedidos Fuera de Régimen o Urgentes:**  
-  * **Descripción:** Pedidos no realizados de manera adecuada en tiempo y forma (autorizados excepcionalmente por Encargado de Técnicos o Gerente de CAT).  
-  * **Meta:** Menos de 20 por mes.
-* **Tiempo Promedio de Preparado de Pedidos:**  
-  * **Descripción:** Tiempo desde el inicio de la preparación hasta dejar el pedido listo en el locker, incluyendo modificaciones y transferencias en sistemas internos.  
-  * **Meta:** Menor a 10 minutos por pedido.
+* **Cantidad de Pedidos Mensuales:**
+    * **Fórmula:** `Sumatoria total de pedidos realizados en el transcurso de 1 mes`
+    * **Meta:** `Seguimiento e información de gestión`
+
+* **Cantidad de Pedidos Fuera de Régimen o Urgentes:**
+    * **Fórmula:** `Sumatoria de pedidos autorizados por fuera de la ventana horaria`
+    * **Meta:** `< 20 por mes`
+
+* **Tiempo Promedio de Preparado de Pedidos:**
+    * **Fórmula:** `Tiempo desde inicio de preparación hasta asignación lista en locker`
+    * **Meta:** `< 10 minutos por pedido`
 
 ---
 
