@@ -71,12 +71,25 @@
 
 ## 6. Indicadores de Gestión (KPIs)
 
-* **Cantidad de Equipos Recuperados (CER):** (Sumatoria total de unidades físicas recibidas en Almacén Devoluciones) | **Meta:** Alineado al volumen de bajas mensuales
-* **Cantidad de Equipos Fuera de Circulación (CEFC):** (Sumatoria total de unidades transferidas al Almacén Descarte) | **Meta:** &le; 15% del total recibido
-* **Cantidad de Equipos Puestos en Circulación (CEPC):** (Sumatoria total de unidades transferidas al Almacén Principal) | **Meta:** &ge; 85% de los equipos viables recibidos
-* **Porcentaje de Recupero Viable (PRV):** ((Cantidad de equipos viables puestos en circulación / Cantidad total de equipos viables recibidos) * 100) | **Meta:** &ge; 90%
-* **Valor Efectivo Recuperado (VER):** (&sum; (Cantidad de equipos viables recuperados por modelo * Precio de compra actual de mercado de dicho modelo)) | **Meta:** Maximizar ahorro de capital
+* **Cantidad de Equipos Recuperados (CER):**
+    * **Fórmula:** `Sumatoria total de unidades físicas recibidas en Almacén Devoluciones`
+    * **Meta:** `Alineado al volumen de bajas mensuales`
 
+* **Cantidad de Equipos Fuera de Circulación (CEFC):**
+    * **Fórmula:** `Sumatoria total de unidades transferidas al Almacén Descarte`
+    * **Meta:** `≤ 15% del total recibido`
+
+* **Cantidad de Equipos Puestos en Circulación (CEPC):**
+    * **Fórmula:** `Sumatoria total de unidades transferidas al Almacén Principal`
+    * **Meta:** `≥ 85% de los equipos viables recibidos`
+
+* **Porcentaje de Recupero Viable (PRV):**
+    * **Fórmula:** `(Cantidad de equipos viables puestos en circulación / Total de viables recibidos) × 100`
+    * **Meta:** `≥ 90%`
+
+* **Valor Efectivo Recuperado (VER):**
+    * **Fórmula:** `Σ (Equipos viables recuperados por modelo × Precio de mercado actual)`
+    * **Meta:** `Maximizar ahorro de capital`
 ---
 
 ## 7. Historial de Control de Cambios
