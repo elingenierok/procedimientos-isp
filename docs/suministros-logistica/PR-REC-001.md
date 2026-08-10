@@ -43,9 +43,9 @@
 
 ---
 
-## 4. Diagrama de Flujo
+## 4. Diagrama de Flujo del Proceso
 
-![Diagrama de Flujo - Recupero de Equipos](../img/PR-REC/FLUJO-REC.png)
+![Diagrama de Flujo de Recupero de Equipos](../img/FLUJO-REC.png)
 
 ---
 
