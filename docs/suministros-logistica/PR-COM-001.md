@@ -50,7 +50,7 @@
 
 ## 4. Diagrama de Flujo del Proceso
 
-![Diagrama de Flujo de Compras](../img/PR-COM/FLUJO-COM.png)
+![Diagrama de Flujo de Compras](../img/FLUJO-COM.png)
 
 ---
 
