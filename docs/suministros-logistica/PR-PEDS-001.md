@@ -46,9 +46,9 @@
 
 ---
 
-## 4. Diagrama de Flujo
+## 4. Diagrama de Flujo del Proceso
 
-![Diagrama de Flujo PR-PEDS-001](docs/img/FLUJO-PEDS.png)
+![Diagrama de Flujo de Compras](../img/FLUJO-PEDS.png)
 
 ---
 
