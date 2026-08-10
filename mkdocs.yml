@@ -30,20 +30,14 @@ theme:
     - search.highlight
     - content.code.copy
 
-extra_css:
-  - stylesheets/extra.css
-
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.to_html
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
   - tables
+  - md_in_html
 
 nav:
   - Inicio: index.md
