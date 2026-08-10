@@ -1,50 +1,86 @@
-# Procedimiento de Retiro y Recupero de Equipos (PR-REC-001)
+# Procedimiento de Recupero de Equipos (PR-REC-001)
 
-**Norma ISO 9001:2015 - Cláusula 8.4** | **Estado:** Borrador de Trabajo | **Versión:** 0.1[cite: 1]
+**Norma ISO 9001:2015 - Cláusulas 8.5 / 8.7** | **Estado:** Borrador de Trabajo | **Versión:** 0.1
 
 ---
 
 ## 1. Objetivo y Alcance
 
-**Objetivo:** Estandarizar y controlar la recepción, diagnóstico técnico, acondicionamiento y actualización sistémica de los equipos de telecomunicaciones recuperados (ONUs, routers), garantizando la exactitud entre el inventario físico y los sistemas de gestión[cite: 1].
+**Objetivo:** Estandarizar y controlar la recepción, diagnóstico técnico, acondicionamiento y actualización sistémica de los equipos de telecomunicaciones recuperados, garantizando la exactitud entre el inventario físico y los sistemas de gestión.
 
-* **Qué HACE:** Recepción física de equipos devueltos por técnicos, inspección/limpieza/desinfección, actualización de firmware (flasheo) y reseteo, verificación en sistemas (SGR / Smart OLT) y reingreso al stock operativo o descarte[cite: 1].
-* **Qué NO HACE:** Contacto ni coordinación comercial con el cliente (Call Center), retiro físico en domicilio (Técnicos de Campo), ni cierres contables de cuentas (Administración)[cite: 1].
+* **Qué HACE:**
+    * Recepción física de los equipos entregados por los técnicos de campo tras la ejecución de una baja o recambio.
+    * Inspección, diagnóstico básico, limpieza, desinfección y puesta en valor estético de los equipos devueltos.
+    * Actualización de firmware (flasheo) y reseteo de parámetros para asegurar la operatividad de los dispositivos.
+    * Verificación y actualización del estado del equipo en los sistemas de gestión (Gestión Real) y plataformas tecnológicas (Smart OLT).
+    * Reingreso del equipo al stock operativo (Almacén Principal) o disposición final por obsolescencia/daño (Almacén Descarte).
+* **Qué NO HACE:**
+    * Recepción de la solicitud de baja, retención y coordinación telefónica con el cliente (Responsabilidad de CAT).
+    * La visita al domicilio, desinstalación y el retiro físico del equipamiento (Responsabilidad de TEC).
+    * Cese de facturación y cierres de cuentas corrientes de clientes (Responsabilidad de Administración y Finanzas).
 
 ---
 
-## 2. Matriz RACI
+## 2. Matriz RACI y Descripción de Pasos
 
-| Paso | Descripción | Responsable (R) | Aprueba (A) | Consultado (C) | Informado (I) |
+| Paso | Actividad / Descripción | Responsable (R) | Aprueba (A) | Consultado (C) | Informado (I) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1. Recepción física** | Recepción en depósito de los equipos devueltos por técnicos o ventanilla[cite: 1]. | TEC / CAT | MNT | - | - |
-| **2. Desvinculación en sistema** | Desvinculación en Smart OLT y SGR. Pase a "Almacén Devoluciones"[cite: 1]. | MNT | MNT | - | - |
-| **3. Triaje y diagnóstico** | Clasificación visual y prueba funcional (encendido/puertos)[cite: 1]. | MNT | MNT | TEC | - |
-| **4. Reacondicionamiento** | Limpieza, desinfección y reseteo a valores de fábrica[cite: 1]. | MNT | MNT | - | - |
-| **5. Ingreso a Almacén Principal** | Transferencia física y sistémica de equipos viables para reuso[cite: 1]. | MNT | MNT | - | - |
-| **6. Traspaso a Descarte** | Registro y traslado físico de unidades defectuosas u obsoletas[cite: 1]. | MNT | MNT | - | - |
+| **1. Recepción física** | Recepción en depósito de los equipos devueltos por técnicos de campo o ventanilla. | TEC / CAT | MNT | - | - |
+| **2. Desvinculación y pase a Devoluciones** | Desvinculación en Smart OLT y Gestión Real. Transferencia de stock en sistema al "Almacén Devoluciones". | MNT | MNT | - | - |
+| **3. Triaje y diagnóstico** | Clasificación visual por modelo y prueba funcional (encendido/puertos) de los modelos viables. | MNT | MNT | TEC | - |
+| **4. Reacondicionamiento** | Limpieza exterior, desinfección y reseteo a valores de fábrica de unidades confirmadas viables. | MNT | MNT | - | - |
+| **5. Ingreso a Almacén Principal** | Transferencia física y sistémica de los equipos reacondicionados al "Almacén Principal" para su reutilización. | MNT | MNT | - | - |
+| **6. Traspaso a Descarte** | Registro sistémico y traslado físico al "Almacén Descarte" del remanente obsoleto o defectuoso. | MNT | MNT | - | - |
+
+*Referencias de Roles:* **TEC:** Técnico de Campo (Operaciones) | **CAT:** Call Center / Atención al Cliente / Ventanilla | **MNT:** Personal de Mantenimiento del Equipamiento (Suministros y Logística)
 
 ---
 
-## 3. Gestión de Excepciones
+## 3. Reglas Operativas del Proceso
 
-!!! warning "Inconsistencia de Serial / MAC en Sistema"
-    El serial no coincide con la orden o figura asignado a cliente. MNT notifica a CAT para regularizar el traspaso sistémico. Si el equipo no existe en base de datos, se da de alta manualmente en SGR[cite: 1].
-
-!!! failure "Etiqueta o Serial Ilegible"
-    MNT conecta el equipo por interfaz lógica (Ethernet/consola) para obtener la MAC/serial interna. Si no responde, se deriva directamente a Descarte[cite: 1].
-
-!!! note "Faltante de Fuente de Alimentación"
-    MNT aprueba la viabilidad del equipo principal y solicita la asignación de un transformador compatible desde el stock de repuestos en SGR[cite: 1].
-
-!!! danger "Daño Físico Severo o Deterioro Irrecuperable"
-    Unidades con componentes quemados, señales de humedad o roturas irrecuperables se rechazan para reacondicionamiento y se transfieren a "Almacén Descarte"[cite: 1].
+* **Regla 1 / Ventana Horaria de Procesamiento:** El triaje, diagnóstico y acondicionamiento de los equipos recibidos debe ejecutarse dentro de las 48 horas hábiles posteriores a su ingreso físico en el depósito de Suministros.
+* **Regla 2 / Trazabilidad Sistémica Estricta:** Todo movimiento físico de los equipos (a Devoluciones, Principal o Descarte) debe estar respaldado por su correspondiente transferencia en tiempo real en Gestión Real y Smart OLT. El inventario físico debe coincidir al 100% con el sistema.
 
 ---
 
-## 4. Indicadores de Gestión (KPIs)
+## 4. Diagrama de Flujo
 
-* **Cantidad de Equipos Recuperados (CER):** Volumen total ingresado en el período[cite: 1].
-* **Cantidad de Equipos Fuera de Circulación (CEFC):** Unidades transferidas a Descarte (Meta: $< 15\%$)[cite: 1].
-* **Porcentaje de Recupero Viable (PRV):** (Equipos puestos en circulación / Equipos viables recibidos) $\times 100$ (Meta: $\ge 90\%$)[cite: 1].
-* **Valor Efectivo Recuperado (VER):** Impacto económico ahorrado por reuso de equipos[cite: 1].
+![Diagrama de Flujo - Recupero de Equipos](../img/PR-REC/FLUJO-REC.png)
+
+---
+
+## 5. Gestión de Excepciones
+
+!!! warning "Excepción 1: Inconsistencia de Trazabilidad en Sistema (Serial no coincide o no existe)"
+    **Escenario:** El equipo ingresa físicamente, pero su número de serie no coincide con la orden de baja, figura asignado aún al cliente/almacén del técnico, o no existe en la base de datos.
+    **Acción Correctiva:** Si figura en almacén TEC o cliente, MNT notifica la inconsistencia al área CAT para regularizar el traspaso sistémico. Si no existe, MNT realiza el alta e ingreso manual del serial en Gestión Real y ejecuta el flujo estándar de pruebas.
+
+!!! warning "Excepción 2: Equipo recibido sin rotulación o etiqueta ilegible"
+    **Escenario:** La etiqueta con el número de serie o MAC está dañada, removida o es ilegible.
+    **Acción Correctiva:** MNT conecta el equipo por interfaz lógica (Ethernet/consola) para identificar el serial/MAC internamente. Si responde, reetiqueta la unidad. Si no responde, se deriva a Descarte.
+
+!!! warning "Excepción 3: Equipo viable con faltantes de accesorios (fuente)"
+    **Escenario:** La unidad principal (ONU/router) está operativa, pero ingresa sin su fuente de alimentación original.
+    **Acción Correctiva:** MNT aprueba la viabilidad del equipo y solicita la asignación de una fuente compatible desde el stock de repuestos para completar el kit antes del reingreso al Almacén Principal.
+
+!!! failure "Excepción 4: Equipo con daño físico o deterioro estético irrecuperable"
+    **Escenario:** El equipo ingresa roto, con partes faltantes, señales de cortocircuito, o suciedad extrema/manchas irremovibles.
+    **Acción Correctiva:** El equipo es rechazado y calificado como "No Viable" inmediatamente. MNT ejecuta el traspaso sistémico y traslado físico directo al "Almacén Descarte".
+
+---
+
+## 6. Indicadores de Gestión (KPIs)
+
+* **Cantidad de Equipos Recuperados (CER):** (Sumatoria total de unidades físicas recibidas en Almacén Devoluciones) | **Meta:** Alineado al volumen de bajas mensuales
+* **Cantidad de Equipos Fuera de Circulación (CEFC):** (Sumatoria total de unidades transferidas al Almacén Descarte) | **Meta:** &le; 15% del total recibido
+* **Cantidad de Equipos Puestos en Circulación (CEPC):** (Sumatoria total de unidades transferidas al Almacén Principal) | **Meta:** &ge; 85% de los equipos viables recibidos
+* **Porcentaje de Recupero Viable (PRV):** ((Cantidad de equipos viables puestos en circulación / Cantidad total de equipos viables recibidos) * 100) | **Meta:** &ge; 90%
+* **Valor Efectivo Recuperado (VER):** (&sum; (Cantidad de equipos viables recuperados por modelo * Precio de compra actual de mercado de dicho modelo)) | **Meta:** Maximizar ahorro de capital
+
+---
+
+## 7. Historial de Control de Cambios
+
+| Versión | Fecha | Descripción de la Modificación | Autor |
+| :--- | :--- | :--- | :--- |
+| 0.1 | 10/08/2026 | Confección del borrador inicial adaptado a las responsabilidades de Mantenimiento de Equipos. | Suministros y Logística |
