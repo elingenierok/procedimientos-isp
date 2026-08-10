@@ -60,8 +60,13 @@ graph TD;
 
 ## 6. Indicadores de Gestión (KPIs)
 
-* **[Nombre Indicador 1]:** (Fórmula de cálculo) | **Meta:** [e.g. $\ge 95\%$]
-* **[Nombre Indicador 2]:** (Fórmula de cálculo) | **Meta:** [e.g. $\le 2$ días]
+* **[Nombre del Indicador 1]:**
+    * **Fórmula:** `[Fórmula de cálculo o descripción del métrico]`
+    * **Meta:** `[e.g. ≥ 95%]`
+
+* **[Nombre del Indicador 2]:**
+    * **Fórmula:** `[Fórmula de cálculo o descripción del métrico]`
+    * **Meta:** `[e.g. ≤ 2 días hábiles]`
 
 ---
 
