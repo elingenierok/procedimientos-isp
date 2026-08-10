@@ -12,21 +12,23 @@ graph TD
 
     PEDT[PR-PEDT-001<br>Pedidos Técnicos]:::proceso
     REC[PR-REC-001<br>Recupero de Equipos]:::proceso
-    ALM[PR-ALM-001<br>Inventario Físico]:::aislado
+    PEDT[PR-PEDT-001<br>Pedidos Técnicos]:::proceso
 
     COM[PR-COM-001<br>Compras]:::proceso
 
     SL ==> PEDT
     SL ==> REC
-    SL ==> ALM
+    SL ==> PETS
 
     PEDT -.->|Falta de Stock| COM
     PEDT -.->|Equipo Fallado| REC
     REC -.->|Baja Definitiva| COM
+    
 
     click PEDT "suministros-logistica/PR-PEDT-001/"
     click COM "suministros-logistica/PR-COM-001/"
     click REC "suministros-logistica/PR-REC-001/"
+    click REC "suministros-logistica/PR-PETS-001/"
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
