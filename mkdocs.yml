@@ -33,7 +33,11 @@ theme:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.arithmatex:
       generic: true
   - tables
@@ -52,4 +56,3 @@ nav:
           - PR-SCR-001 Disposición Final: suministros-logistica/PR-SCR-001.md
   - 🔍 Diagnósticos Técnicos:
       - 🧪 DG-EQU-001 Diagnóstico de ONUs y Routers: diagnosticos/DG-EQU-001.md
-        
