@@ -51,7 +51,7 @@ graph TD
     B1[Bloque A: Conexión <br/> 00:51 min] --> B2[Bloque B: SmartOLT/NOC <br/> 03:20 min - OPTIMIZADO]
     B2 --> B3[Bloque C: Test WiFi <br/> 00:44 min]
     B3 --> B4[Bloque D: Acondicionado <br/> 08:23 min]
-
+```
 ## 3. Matriz Comparativa de Tiempos y Capacidad
 
 | Etapa / Bloque del Proceso | Escenario Inicial ("Antes") | Escenario Optimizado ("Después") | Variación Absoluta | Variación Porcentual |
