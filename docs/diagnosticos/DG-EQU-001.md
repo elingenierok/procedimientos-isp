@@ -96,5 +96,5 @@ graph TD
 
 | Versión | Fecha | Descripción de la Modificación | Autor |
 | :--- | :--- | :--- | :--- |
-| 0.1 | 16/08/2026 | Medición inicial con fricción de sistema (16:42 min total)[cite: 1]. | Auditoría de Laboratorio |
-| 1.0 | 16/08/2026 | Optimización de SmartOLT c/NOC y fijación de SLA (11:43 min total)[cite: 2]. | Jefatura de Depósito / S&L |
+| 0.1 | 16/08/2026 | Medición inicial con fricción de sistema (16:42 min total). | Auditoría de Laboratorio |
+| 1.0 | 16/08/2026 | Optimización de SmartOLT c/NOC y fijación de SLA (11:43 min total). | Jefatura de Depósito / S&L |
