@@ -43,16 +43,16 @@ Se articuló una solución técnica con el área de NOC para eliminar las colas 
 
 ```mermaid
 graph TD
-    subgraph ANTES ["Escenario Inicial (16:42 min)"]
-        A1[Bloque A: Conexión <br/> 00:51 min] --> A2[Bloque B: SmartOLT/SGR <br/> 08:19 min - 🚨 CUELLO DE BOTELLA]
+    subgraph ANTES ["🚨 Escenario Inicial (16:42 min)"]
+        A1[Bloque A: Conexión <br/> 00:51 min] --> A2[Bloque B: SmartOLT/SGR <br/> 08:19 min - CUELLO DE BOTELLA]
         A2 --> A3[Bloque C: Test WiFi <br/> 00:44 min]
         A3 --> A4[Bloque D: Acondicionado <br/> 08:23 min]
     end
 ```
 ```mermaid
 graph TD
-    subgraph DESPUES ["Escenario Optimizado (11:43 min)"]
-        B1[Bloque A: Conexión <br/> 00:51 min] --> B2[Bloque B: SmartOLT/NOC <br/> 03:20 min - ✅ OPTIMIZADO]
+    subgraph DESPUES ["✅ Escenario Optimizado (11:43 min)"]
+        B1[Bloque A: Conexión <br/> 00:51 min] --> B2[Bloque B: SmartOLT/NOC <br/> 03:20 min - OPTIMIZADO]
         B2 --> B3[Bloque C: Test WiFi <br/> 00:44 min]
         B3 --> B4[Bloque D: Acondicionado <br/> 08:23 min]
     end
