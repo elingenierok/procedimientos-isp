@@ -1,17 +1,18 @@
 ```mermaid
-gantt
-    title COMPARATIVO DE TIEMPOS - ANTES VS DESPUES (ONU CATV)
-    dateFormat  YYYY-MM-DD HH:mm:ss
-    axisFormat  %M:%S
+graph LR
+    subgraph ANTES ["ESCENARIO ANTES (Tiempo Total: 16:42 min)"]
+        direction LR
+        A1["A. Recepción<br>00:51 min"] --> A2["B. SmartOLT / SGR<br>08:19 min (CUELLO BOTELLA)"]
+        A2 --> A3["C. Test WiFi<br>00:44 min"]
+        A3 --> A4["D. Acondicionamiento<br>08:23 min"]
+    end
 
-    section ESCENARIO ANTES (16m 42s Total)
-    Bloque A - Recepcion y Conexion (00:51)       :done, a1, 2026-01-01 00:00:00, 2026-01-01 00:00:51
-    Bloque B - SmartOLT y SGR - Friccion (08:19)  :crit, active, a2, 2026-01-01 00:00:51, 2026-01-01 00:09:10
-    Bloque C - Test WiFi y Etiquetado (00:44)     :done, a3, 2026-01-01 00:09:10, 2026-01-01 00:09:54
-    Bloque D - Acondicionamiento y GR (08:23)     :a4, 2026-01-01 00:09:54, 2026-01-01 00:18:17
+    subgraph DESPUES ["ESCENARIO DESPUÉS (Tiempo Total: 11:43 min - 30% AHORRO)"]
+        direction LR
+        B1["A. Recepción<br>00:51 min"] --> B2["B. SmartOLT / NOC<br>03:20 min (OPTIMIZADO)"]
+        B2 --> B3["C. Test WiFi<br>00:44 min"]
+        B3 --> B4["D. Acondicionamiento<br>08:23 min"]
+    end
 
-    section ESCENARIO DESPUES (11m 43s Total)
-    Bloque A - Recepcion y Conexion (00:51)       :done, b1, 2026-01-01 00:00:00, 2026-01-01 00:00:51
-    Bloque B - SmartOLT y NOC - Optimizado (03:20) :active, b2, 2026-01-01 00:00:51, 2026-01-01 00:04:11
-    Bloque C - Test WiFi y Etiquetado (00:44)     :done, b3, 2026-01-01 00:04:11, 2026-01-01 00:04:55
-    Bloque D - Acondicionamiento y GR (08:23)     :b4, 2026-01-01 00:04:55, 2026-01-01 00:13:18
+    style A2 fill:#e74c3c,stroke:#922b21,color:#ffffff,stroke-width:2px
+    style B2 fill:#27ae60,stroke:#1e8449,color:#ffffff,stroke-width:2px
