@@ -9,15 +9,15 @@
 **Objetivo:** Diagnosticar formalmente la operación de prueba técnica, verificación física y clasificación en laboratorio de las ONUs CATV. El propósito es identificar cuellos de botella sistémicos versus ineficiencias del factor humano, estableciendo una línea base real de tiempos para la construcción del Procedimiento Operativo Estandarizado (POE).
 
 * **Resumen Ejecutivo del Trabajo Realizado:**
-    * **Metodología:** Relevamiento integral de 2.5 días bajo la modalidad de trabajo auditado en pareja (*Benchmarking Inter-sucursales*).
+    * **Metodología:** Relevamiento integral de 2.5 días bajo la modalidad de trabajo auditado en pareja.
     * **Desglose de Variables:** Discriminación entre la eficiencia del técnico y la latencia propia de las plataformas informáticas de gestión.
     * **Resultados Obtenidos:** Resolución de falla de parametrización en SmartOLT junto al área de NOC, reduciendo el aprovisionamiento lógico de **08:19 min** a **03:20 min**.
     * **Impacto Operativo:** Reducción del ciclo total de **16:42 min** a **11:43 min** (-30%), incrementando la capacidad diaria por técnico en **+46.4%** (de 28 a 41 equipos/día).
 
 * **Insumos y Herramientas Obligatorias:**
     * **Banco de Pruebas:** Fuente de alimentación 12V / 1.5A, lápiz óptico de limpieza SC/APC, cable coaxial RG6, patch cords de fibra.
-    * **Sistemas / Software:** Plataforma SmartOLT, Sistema de Gestión Real (SGR), Sistema ISP, gestión TR069.
-    * **EPP y Seguridad:** Protecciones ESD (manta/pulsera antiestática) y lentes de seguridad para manipulación de fibra óptica.
+    * **Sistemas / Software:** Plataforma SmartOLT, Sistema de Gestión Real (SGR), Sistema de carga y prueba (planilla de registro), gestión TR069.
+    * **EPP y Seguridad:** Guantes para limpieza y manipulación de equipos.
 
 ---
 
