@@ -48,7 +48,7 @@ graph TD
         A2 --> A3[Bloque C: Test WiFi <br/> 00:44 min]
         A3 --> A4[Bloque D: Acondicionado <br/> 08:23 min]
     end
-graph TD
+
     subgraph DESPUES ["Escenario Optimizado (11:43 min)"]
         B1[Bloque A: Conexión <br/> 00:51 min] --> B2[Bloque B: SmartOLT/NOC <br/> 03:20 min - OPTIMIZADO]
         B2 --> B3[Bloque C: Test WiFi <br/> 00:44 min]
@@ -60,24 +60,22 @@ graph TD
 
 | Etapa / Bloque del Proceso | Escenario Inicial ("Antes") | Escenario Optimizado ("Después") | Variación Absoluta | Variación Porcentual |
 | :--- | :---: | :---: | :---: | :---: |
-| **Bloque A:** Recepción y Conexión Física | 00:51 min[cite: 1, 2] | 00:51 min[cite: 1, 2] | 00:00 min | 0.0%[cite: 1, 2] |
-| **Bloque B:** Carga y Aprovisionamiento Lógico | **08:19 min**[cite: 1] | **03:20 min**[cite: 2] | **-04:59 min**[cite: 1, 2] | **-60.0%**[cite: 1, 2] |
-| **Bloque C:** Pruebas Operativas y Etiquetado | 00:44 min[cite: 1, 2] | 00:44 min[cite: 1, 2] | 00:00 min | 0.0%[cite: 1, 2] |
-| **Bloque D:** Acondicionamiento Físico y GR | 08:23 min[cite: 1, 2] | 08:23 min[cite: 1, 2] | 00:00 min | 0.0%[cite: 1, 2] |
-| **TIEMPO TOTAL POR UNIDAD** | **16:42 min**[cite: 1] | **11:43 min**[cite: 2] | **-04:59 min**[cite: 1, 2] | **-29.8%**[cite: 1, 2] |
-| **CAPACIDAD DIARIA TEÓRICA (Jornada 8h)** | **28 equipos / día**[cite: 1] | **41 equipos / día**[cite: 2] | **+13 equipos**[cite: 1, 2] | **+46.4%**[cite: 1, 2] |
+| **Bloque A:** Recepción y Conexión Física | 00:51 min | 00:51 min | 00:00 min | 0.0% |
+| **Bloque B:** Carga y Aprovisionamiento Lógico | **08:19 min** | **03:20 min** | **-04:59 min** | **-60.0%** |
+| **Bloque C:** Pruebas Operativas y Etiquetado | 00:44 min | 00:44 min | 00:00 min | 0.0% |
+| **Bloque D:** Acondicionamiento Físico y GR | 08:23 min | 08:23 min | 00:00 min | 0.0% |
+| **TIEMPO TOTAL POR UNIDAD** | **16:42 min** | **11:43 min** | **-04:59 min** | **-29.8%** |
+| **CAPACIDAD DIARIA TEÓRICA (Jornada 8h)** | **28 equipos / día** | **41 equipos / día** | **+13 equipos** | **+46.4%** |
 
 ### Comparativo Visual de Tiempos por Etapa
 
 | Escenario | Bloque A (Conexión) | Bloque B (SmartOLT / SGR) | Bloque C (WiFi) | Bloque D (Acondicionado) | Tiempo Total |
 | :--- | :---: | :--- | :---: | :--- | :---: |
-| **ANTES** | 🟦 0:51 | 🟥🟥🟥🟥🟥🟥🟥🟥 **8:19** *(Fricción)* | 🟨 0:44 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **16:42 min**[cite: 1] |
-| **DESPUÉS** | 🟦 0:51 | 🟩🟩🟩 **3:20** *(Optimizado NOC)* | 🟨 0:44 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **11:43 min**[cite: 2] |
+| **ANTES** | 🟦 0:51 | 🟥🟥🟥🟥🟥🟥🟥🟥 **8:19** *(Fricción)* | 🟨 0:44 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **16:42 min** |
+| **DESPUÉS** | 🟦 0:51 | 🟩🟩🟩 **3:20** *(Optimizado NOC)* | 🟨 0:44 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **11:43 min** |
 
 > **Leyenda Visual:**  
 > 🟦 *Conexión física* | 🟥 *Cuello de botella sistémico* | 🟩 *Proceso optimizado / Acondicionamiento* | 🟨 *Prueba inalámbrica*
-
----
 
 ## 4. Diagnóstico de Fricciones: Sistema vs. Factor Humano
 
