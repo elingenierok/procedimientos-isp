@@ -80,21 +80,17 @@ graph TD
 ## 4. Diagnóstico de Fricciones: Sistema vs. Factor Humano
 
 !!! failure "Fricción Sistémica (Resuelta)"
-    **Diagnóstico:** Se confirmó que la baja producción histórica no respondía únicamente a la actitud del trabajador[cite: 1]. Las demoras en la respuesta de las plataformas SmartOLT y SGR llegaban a inflar el tiempo de prueba en hasta un **85% adicional**[cite: 2]. Sin la intervención con NOC, el técnico quedaba atado a un bucle de espera sin posibilidad de acelerar el trabajo[cite: 1, 2].
+    **Diagnóstico:** Se confirmó que la baja producción histórica no respondía únicamente a la actitud del trabajador. Las demoras en la respuesta de las plataformas SmartOLT y SGR llegaban a inflar el tiempo de prueba en hasta un **85% adicional**. Sin la intervención con NOC, el técnico quedaba atado a un bucle de espera sin posibilidad de acelerar el trabajo.
 
 !!! warning "Factor Humano y Fricción Operativa (Bajo Control)"
-    **Diagnóstico:** El acompañamiento auditado reveló que realizar cargas administrativas en el sistema SGR en medio de las pruebas ópticas dispersaba la atención del operario[cite: 1, 2]. Se ordenó trasladar todo el empaque y registro en SGR al final del ciclo (Bloque D), fijando un estándar de **08:23 min**[cite: 1, 2]. Con la plataforma optimizada[cite: 2], cualquier demora superior a los 11:43 min totales pasa a ser atribuible a micro-pausas, desorden en la mesa o uso del celular[cite: 2].
-
----
+    **Diagnóstico:** El acompañamiento auditado reveló que realizar cargas administrativas en el sistema SGR en medio de las pruebas ópticas dispersaba la atención del operario. Se ordenó trasladar todo el empaque y registro en SGR al final del ciclo (Bloque D), fijando un estándar de **08:23 min**. Con la plataforma optimizada, cualquier demora superior a los 11:43 min totales pasa a ser atribuible a micro-pausas, desorden en la mesa o uso del celular.
 
 ## 5. Conclusiones y Decisiones Estratégicas
 
-* **1. Imposición del SLA Objetivo:** Se fija formalmente como norma de laboratorio un tiempo límite de **11:43 minutos por equipo CATV**[cite: 2]. Esta métrica servirá de base para auditar la productividad diaria del personal[cite: 2].
-* **2. Protocolo de Escalamiento a NOC:** Queda prohibido que el técnico permanezca esperando la respuesta pasiva del sistema[cite: 1, 2]. Si un comando en SmartOLT supera los **45 segundos en bucle**, se debe abrir un ticket inmediato a NOC[cite: 1, 2].
-* **3. Respaldo Técnico para RRHH:** El informe proporciona evidencia cuantitativa y objetiva para desestimar excusas operativas sobre las planillas diarias, permitiendo exigir un rendimiento acorde a la nueva capacidad instalada (**41 equipos/día**)[cite: 2].
+* **1. Imposición del SLA Objetivo:** Se fija formalmente como norma de laboratorio un tiempo límite de **11:43 minutos por equipo CATV**. Esta métrica servirá de base para auditar la productividad diaria del personal.
+* **2. Protocolo de Escalamiento a NOC:** Queda prohibido que el técnico permanezca esperando la respuesta pasiva del sistema. Si un comando en SmartOLT supera los **45 segundos en bucle**, se debe abrir un ticket inmediato a NOC.
+* **3. Respaldo Técnico para RRHH:** El informe proporciona evidencia cuantitativa y objetiva para desestimar excusas operativas sobre las planillas diarias, permitiendo exigir un rendimiento acorde a la nueva capacidad instalada (**41 equipos/día**).
 * **4. Transferibilidad a Sucursales y Stock:** Este diagnóstico constituye el insumo principal para redactar el POE definitivo que se extrapolará a las sucursales sin personal exclusivo de prueba, asegurando que los dos almacenes auditados (Principal y Devoluciones) mantengan un registro de stock 100% certero.
-
----
 
 ## 6. Historial de Control de Cambios
 
