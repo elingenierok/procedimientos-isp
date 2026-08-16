@@ -48,7 +48,7 @@ graph TD
         A2 --> A3[Bloque C: Test WiFi <br/> 00:44 min]
         A3 --> A4[Bloque D: Acondicionado <br/> 08:23 min]
     end
-
+graph TD
     subgraph DESPUES ["Escenario Optimizado (11:43 min)"]
         B1[Bloque A: Conexión <br/> 00:51 min] --> B2[Bloque B: SmartOLT/NOC <br/> 03:20 min - OPTIMIZADO]
         B2 --> B3[Bloque C: Test WiFi <br/> 00:44 min]
