@@ -41,13 +41,16 @@ Se articuló una solución técnica con el área de NOC para eliminar las colas 
 
 ### 2.3. Diagramas de Flujo Comparativos
 
-**Escenario Inicial (16:42 min)**
-
+#### Escenario Inicial ("Antes")
 ```mermaid
 graph TD
     A1[Bloque A: Conexión <br/> 00:51 min] --> A2[Bloque B: SmartOLT/SGR <br/> 08:19 min - CUELLO BOTELLA]
     A2 --> A3[Bloque C: Test WiFi <br/> 00:44 min]
     A3 --> A4[Bloque D: Acondicionado <br/> 08:23 min]
+graph TD
+    B1[Bloque A: Conexión <br/> 00:51 min] --> B2[Bloque B: SmartOLT/NOC <br/> 03:20 min - OPTIMIZADO]
+    B2 --> B3[Bloque C: Test WiFi <br/> 00:44 min]
+    B3 --> B4[Bloque D: Acondicionado <br/> 08:23 min]
 
 ## 3. Matriz Comparativa de Tiempos y Capacidad
 
