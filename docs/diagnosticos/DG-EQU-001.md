@@ -39,7 +39,6 @@ El procedimiento integral de recupero y reinserción de equipos en stock se comp
 
 ### 2.1. Escenario Inicial ("Antes" - Con Fricción Sistémica)
 En esta fase, los tiempos del banco de pruebas se encontraban severamente inflados por bloqueos y bucles de espera pasiva en las plataformas informáticas (SmartOLT y SGR).
-
 ```mermaid
 graph TD
     subgraph ETAPA_2 ["🚨 Etapa 2: Prueba en Laboratorio (06:26 min medidos / 08:19 min c/fricción)"]
@@ -53,8 +52,6 @@ graph TD
 
     A4 --> A5[Fin Ciclo Inicial: 17:44 min Total c/Fricción <br/> 15:51 min Total Medido]
 ```
----
-
 ### 2.2. Escenario Optimizado ("Después" - Con Intervención NOC)
 Tras la intervención con el área de NOC, se optimizó la secuencia de comandos en SmartOLT y se automatizó la depuración de la interfaz PPP 1.1 mediante TR069 en simultáneo, unificando los pasos del banco.
 ```mermaid
