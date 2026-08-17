@@ -1,8 +1,19 @@
-# Estructura Operativa - Suministros y Logística
+# 🏢 Área de Suministros y Logística (S&L)
 
-<div class="mermaid">
+!!! abstract "Nuestra Razón de Ser"
+    El área de **Suministros y Logística (S&L)** de Obercom tiene como misión principal garantizar la continuidad operativa y sostener la expansión de nuestra red de telecomunicaciones al menor **Costo Total de Propiedad (TCO)**. 
+    
+    Somos el motor logístico de la empresa: aseguramos que nuestros equipos de campo y sucursales siempre tengan los materiales que necesitan, en el momento y lugar correctos, optimizando los recursos y protegiendo el capital de la organización.
+
+---
+
+## 🗺️ Mapa Operativo y Estructura de Roles
+
+A continuación, se detalla la estructura organizativa del área, liderada por la Gerencia y dividida en tres grandes verticales operativas.
+
+```mermaid
 graph TD
-    classDef gerencia fill:#0d1117,stroke:#ffbf00,stroke-width:3px,color:#ffbf00,font-weight:bold;
+    classDef gerencia fill:#0d1117,stroke:#ffbf00,stroke-width:2px,color:#ffbf00,font-weight:bold;
     classDef area fill:#161b22,stroke:#00f3ff,stroke-width:2px,color:#00f3ff,font-weight:bold;
     classDef rol fill:#1f2428,stroke:#39ff14,stroke-width:1px,color:#c9d1d9,border-radius:5px;
 
@@ -36,11 +47,5 @@ graph TD
     GER ==> SV3
 
     %% Conexiones Operativas Internas
-    R_COMP -.->|Delega tareas operativas| R_ASIS
+    R_COMP -.->|Delega tareas| R_ASIS
     R_MANT -.->|Abastece / Audita| R_SUC
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true, theme: 'dark', flowchart: { curve: 'smooth' } });
-</script>
