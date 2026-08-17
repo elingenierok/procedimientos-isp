@@ -49,5 +49,4 @@ graph LR
     R_ASIS -.->|Interacción constante| SV2
     R_ASIS -.->|Interacción constante| SV3
     R_ASIS -.->|Interacción constante| SV4
-
-   ```
+```
