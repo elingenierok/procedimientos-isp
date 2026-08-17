@@ -1,45 +1,49 @@
-# Biblioteca de Documentación Operativa - Obercom
+# Mapa Operativo - Suministros y Logística
 
 <div class="mermaid">
 graph LR
     classDef area fill:#0d1117,stroke:#00f3ff,stroke-width:3px,color:#00f3ff,font-weight:bold;
-    classDef activo fill:#0d1117,stroke:#39ff14,stroke-width:2px,color:#39ff14,font-weight:bold;
+    classDef subvertical fill:#161b22,stroke:#39ff14,stroke-width:2px,color:#39ff14,font-weight:bold;
+    classDef tarea fill:#161b22,stroke:#8b949e,stroke-width:1px,color:#c9d1d9,border-radius:5px;
 
-    %% Bloques Raíz (Áreas)
+    %% Bloque Raíz
     SL[<b>SUMINISTROS Y LOGÍSTICA</b>]:::area
-    DG[<b>DIAGNÓSTICOS TÉCNICOS</b>]:::area
 
-    %% Subgráfico S&L
-    subgraph S_L ["🟢 Suministros y Logística"]
+    %% Sub-Vertical 1
+    subgraph SV1 ["🛒 Compras y Suministros"]
         direction TB
-        COM[PR-COM-001 Compras]:::activo
-        PEDS[PR-PEDS-001 Pedidos Sucursales]:::activo
-        PEDT[PR-PEDT-001 Pedidos Técnicos]:::activo
-        REC[PR-REC-001 Recupero de Equipos]:::activo
+        C1[Gestión de Proveedores]:::tarea
+        C2[Compras Estratégicas]:::tarea
+        C3[Compras Operativas]:::tarea
     end
 
-    %% Subgráfico Diagnósticos
-    subgraph DIAG ["🔍 Diagnósticos"]
+    %% Sub-Vertical 2
+    subgraph SV2 ["📦 Depósito y Equipamiento"]
         direction TB
-        DGEQU[DG-EQU-001 Diagnóstico de Equipos]:::activo
+        D1[Control SGR / SmartOLT]:::tarea
+        D2[Reacondicionamiento ONUs]:::tarea
+        D3[Despacho a Técnicos]:::tarea
+        D4[Auditoría a Sucursales]:::tarea
+    end
+
+    %% Sub-Vertical 3
+    subgraph SV3 ["🚚 Flota Vehicular"]
+        direction TB
+        F1[Mantenimiento Preventivo]:::tarea
+        F2[Control Legal VTV/Seguros]:::tarea
+        F3[Checklist Diario y Consumo]:::tarea
     end
 
     %% Conexiones
-    SL ==> S_L
-    DG ==> DIAG
-
-    %% Enlace cruzado (Ejemplo: Recupero deriva a Diagnóstico)
-    REC -.->|Evaluar Fallas| DGEQU
-
-    %% Links
-    click COM "suministros-logistica/PR-COM-001/"
-    click PEDS "suministros-logistica/PR-PEDS-001/"
-    click PEDT "suministros-logistica/PR-PEDT-001/"
-    click REC "suministros-logistica/PR-REC-001/"
-    click DGEQU "diagnosticos/DG-EQU-001/"
+    SL ==> SV1
+    SL ==> SV2
+    SL ==> SV3
+    
+    %% Relaciones operativas (Ejemplo: Compras nutre al depósito)
+    SV1 -.->|Ingreso de Mercadería| SV2
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
-  mermaid.initialize({ startOnLoad: true, theme: 'dark', flowchart: { curve: 'linear' } });
+  mermaid.initialize({ startOnLoad: true, theme: 'dark', flowchart: { curve: 'basis' } });
 </script>
