@@ -1,4 +1,4 @@
-site_name: Obercom - Portal de Procedimientos
+site_name: Obercom - Portal de Suministros y Logística
 site_description: Documentación oficial estandarizada de Obercom
 
 theme:
@@ -45,11 +45,11 @@ markdown_extensions:
 
 nav:
   - 🏠︎ Inicio: index.md
-  - 📦 Suministros y Logística:
+  - 📦 Procedimientos:
       - 💰 PR-COM-001 Compras: suministros-logistica/PR-COM-001.md
       - 🔁 PR-REC-001 Recupero de Equipos: suministros-logistica/PR-REC-001.md
-      - 📝👷 PR-PEDT-001 Pedidos Técnicos: suministros-logistica/PR-PEDT-001.md
-      - 📝🏢 PR-PEDS-001 Pedidos Sucursales: suministros-logistica/PR-PEDS-001.md
+      - 👷 PR-PEDT-001 Pedidos Técnicos: suministros-logistica/PR-PEDT-001.md
+      - 🏢 PR-PEDS-001 Pedidos Sucursales: suministros-logistica/PR-PEDS-001.md
       - En Desarrollo:
           - PR-HER-001 Reposición de Herramientas: suministros-logistica/PR-HER-001.md
           - PR-AUDS-001 Auditoría de Móviles: suministros-logistica/PR-AUDS-001.md
