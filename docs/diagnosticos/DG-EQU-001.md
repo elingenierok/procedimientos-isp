@@ -12,7 +12,7 @@
     * **Metodología:** Relevamiento integral de 2.5 días bajo la modalidad de trabajo auditado en pareja.
     * **Desglose de Variables:** Discriminación entre la eficiencia propia del técnico y la latencia generada por la infraestructura de software.
     * **Resultados Obtenidos:** Optimización de la secuencia de comandos en SmartOLT y automatización de la interfaz PPP 1.1 vía TR069 junto a NOC, reduciendo el tiempo de la Etapa 2 (Pruebas en Banco) de `08:19 min` (friccional) a **`03:20 min`** (SLA Target), y de `06:26 min` a **`03:46 min`** en medición directa por subtareas (-41.5%).
-    * **Impacto Operativo (Ciclo de Laboratorio - Etapas 2 y 3):** Reducción del ciclo total de **16:42 min** a **11:43 min** (-29.8% $\approx -30\%$), incrementando la capacidad diaria instalada por técnico de **28 a 41 equipos/día** (+42.5% exacto / +46.4% sobre enteros redondeados). *(Suma de las 3 Etapas unificadas: de 17:44 min a 12:45 min / 27 a 38 equipos/día)*.
+    * **Impacto Operativo (Proceso Unificado de 3 Etapas):** Reducción del ciclo total de **17:44 min** (friccional) a **12:45 min** (SLA Target) y **13:11 min** en medición directa, incrementando la capacidad diaria instalada por técnico de **27 a 38 equipos/día** (+39.1% de productividad general). *(Equivalente en ciclo exclusivo de banco/laboratorio Etapas 2 y 3: de 16:42 min a 11:43 min / 28 a 41 equipos/día)*.
 
 * **Insumos y Herramientas Obligatorias:**
     * **Banco de Pruebas:** Fuente de alimentación 12V / 1.5A, lápiz óptico de limpieza SC/APC, cable coaxial RG6, patch cords de fibra óptica y lector/escáner de código de barras.
@@ -39,6 +39,7 @@ El procedimiento integral de recupero y reinserción de equipos en stock se comp
 
 ### 2.1. Escenario Inicial ("Antes" - Con Fricción Sistémica)
 En esta fase, los tiempos del banco de pruebas se encontraban severamente inflados por bloqueos y bucles de espera pasiva en las plataformas informáticas (SmartOLT y SGR).
+
 ```mermaid
 graph TD
     subgraph ETAPA_2 ["🚨 Etapa 2: Prueba en Laboratorio (06:26 min medidos / 08:19 min c/fricción)"]
@@ -50,7 +51,7 @@ graph TD
         A3 --> A4[Etapa 3: Registro GR, Limpieza y Empaque <br/> ⏱️ 08:23 min]
     end
 
-    A4 --> A5[Fin Ciclo Inicial: 16:42 min Total]
+    A4 --> A5[Fin Ciclo Inicial: 17:44 min Total c/Fricción <br/> 15:51 min Total Medido]
 ```
 ---
 
@@ -67,7 +68,7 @@ graph TD
         B3 --> B4[Etapa 3: Registro GR, Limpieza y Empaque <br/> ⏱️ 08:23 min]
     end
 
-    B4 --> B5[Fin Ciclo Optimizado: 11:43 min SLA Target]
+    B4 --> B5[Fin Ciclo Optimizado: 12:45 min SLA Target 3 Etapas <br/> 11:43 min Banco/Laboratorio]
 ```
 
 ### 2.3. Sensibilidad de Red y Comparativa de Escenarios (Etapa 2)
