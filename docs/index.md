@@ -40,7 +40,7 @@ graph TD
         direction TB
         R_FLOTA["<b>🚛 Encargado de Flota</b><br>Mantenimiento, VTV, Combustible"]:::rol
     end
-
+```
     %% Conexiones Jerárquicas
     GER ==> SV1
     GER ==> SV2
