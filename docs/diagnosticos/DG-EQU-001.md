@@ -120,6 +120,7 @@ Acoplando las **3 Etapas del Proceso** (`Etapa 1 - Ingreso`: 01:02 min, `Etapa 2
 | **Piso Garantizado (Red Lenta)** | **15:21 min** | **3.9 eq/h** | **31 eq/día** | Mínimo aceptable ante degradación extrema de sistemas. |
 | *Línea Base Anterior (Con Fricción)* | *17:44 min* | *3.4 eq/h* | *27 eq/día* | Estado previo a la intervención de NOC (-28.9% capacidad). |
 
+> **Aclaración:** Mediante esta optimización se logra **ahorrar aproximadamente 5 minutos** de trabajo y esperas por unidad, lo que representa una **reducción de casi el 30%** en el tiempo de ciclo total del proceso. En la Etapa 2, **el ahorro fue de casi %60** en el tiempo de banco
 ### 5.2. Reglas Operativas e Insumos Normativos
 
 * **Protocolo NOC (Máx. 45s):** Prohibido esperar bucles del sistema. Excedido el tiempo límite de 45 segundos en SmartOLT, se escala a NOC y se pasa a la siguiente unidad.
