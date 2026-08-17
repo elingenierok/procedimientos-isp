@@ -32,8 +32,7 @@ graph TD
         direction TB
         R_MANT["<b>💻 Mantenimiento de Equipamiento</b><br>Flasheo ONUs y Control Stock"]:::rol
         R_SUC["<b>👶 Asistente de Sucursal</b><br>Nexo Operativo y Stock Local"]:::rol
-        R_PAS["<b>🤓 Pasante (Trainee)</b><br>Apoyo QA y Logística Inversa"]:::rol
-    end
+        end
 
     %% Sub-Vertical 3
     subgraph SV3 ["🚚 3. Flota Vehicular"]
@@ -41,12 +40,16 @@ graph TD
         R_FLOTA["<b>🚛 Encargado de Flota</b><br>Mantenimiento, VTV, Combustible"]:::rol
     end
 
+    %% Sucursales
+    subgraph SV4 ["🏢 Sucursales"]
+        direction TB
+        R_SUC["<b>👶 Asistente de Sucursal</b><br>Nexo Operativo y Stock Local"]:::rol
+    end
+
     %% Conexiones Jerárquicas
     GER ==> SV1
     GER ==> SV2
     GER ==> SV3
+ GER ==> SV4
 
-    %% Conexiones Operativas Internas
-    R_COMP -.->|Delega tareas| R_ASIS
-    R_MANT -.->|Abastece / Audita| R_SUC
-```
+   ```
