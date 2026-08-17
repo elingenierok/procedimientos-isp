@@ -25,7 +25,7 @@
 
 Este procedimiento interactúa y se complementa con la siguiente información documentada:
 
-* 📄 **[DG-EQU-001: Diagnóstico General de Equipos](link-aqui)**: Detalla los parámetros técnicos de aceptación y rechazo general de equipamiento.
+* 📄 **[DG-EQU-001: Diagnóstico General de Equipos](../diagnosticos/DG-EQU-001.md)**: Detalla los parámetros técnicos de aceptación y rechazo general de equipamiento.
 
 ---
 
