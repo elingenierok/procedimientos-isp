@@ -73,10 +73,10 @@ Para demostrar la solidez del avance logrado, se evaluó el comportamiento de la
 
 Acoplando las **3 Etapas del Proceso** (`Etapa 1 - Ingreso`: 01:02 min, `Etapa 2 - Prueba`: variable según respuesta del sistema, y `Etapa 3 - Acondicionamiento`: 08:23 min fijos), la capacidad instalada equivalente por técnico (jornada laboral de 8 horas / 480 minutos) evoluciona de la siguiente manera:
 
-* **Línea Base Inicial ("Antes" Friccional):** `17:44 min` ciclo total (`01:02` + `08:19` + `08:23`) $\rightarrow$ **27 equipos / día** (3.4 eq/hora).
-* **Peor Escenario ("Después" Red Lenta):** `15:21 min` ciclo total (`01:02` + `05:56` + `08:23`) $\rightarrow$ **31 equipos / día** (+15.5% capacidad / 3.9 eq/hora).
-* **Escenario Medido Directo (Suma Subtareas):** `13:11 min` ciclo total (`01:02` + `03:46` + `08:23`) $\rightarrow$ **36 equipos / día** (+34.5% capacidad / 4.6 eq/hora).
-* **Mejor Escenario ("Después" SLA Target):** `12:45 min` ciclo total (`01:02` + `03:20` + `08:23`) $\rightarrow$ **38 equipos / día** (+39.1% capacidad / 4.7 eq/hora).
+* **Línea Base Inicial ("Antes" Friccional):** `17:44 min` ciclo total (`01:02` + `08:19` + `08:23`) → **27 equipos / día** (3.4 eq/hora).
+* **Peor Escenario ("Después" Red Lenta):** `15:21 min` ciclo total (`01:02` + `05:56` + `08:23`) → **31 equipos / día** (+15.5% capacidad / 3.9 eq/hora).
+* **Escenario Medido Directo (Suma Subtareas):** `13:11 min` ciclo total (`01:02` + `03:46` + `08:23`) → **36 equipos / día** (+34.5% capacidad / 4.6 eq/hora).
+* **Mejor Escenario ("Después" SLA Target):** `12:45 min` ciclo total (`01:02` + `03:20` + `08:23`) → **38 equipos / día** (+39.1% capacidad / 4.7 eq/hora).
 
 > **Aclaración Metodológica:** Las tres etapas pueden ejecutarse de forma independiente y secuencial. Los valores expuestos representan el **tiempo de ciclo equivalente por unidad individual** para completar el flujo completo de reinserción. En la práctica operativa, la ejecución por **lotes de equipos** permite amortizar tiempos de traslado y maximizar el rendimiento general del laboratorio.
 
