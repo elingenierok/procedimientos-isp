@@ -12,7 +12,7 @@
     * **Metodología:** Relevamiento integral de 2.5 días bajo la modalidad de trabajo auditado en pareja.
     * **Desglose de Variables:** Discriminación entre la eficiencia propia del técnico y la latencia generada por la infraestructura de software.
     * **Resultados Obtenidos:** Optimización de la secuencia de comandos en SmartOLT y automatización de la interfaz PPP 1.1 vía TR069 junto a NOC, reduciendo el tiempo de la Etapa 2 (Pruebas en Banco) de `08:19 min` (friccional) a **`03:20 min`** (SLA Target), y de `06:26 min` a **`03:46 min`** en medición directa por subtareas (-41.5%).
-    * **Impacto Operativo (Proceso Unificado de 3 Etapas):** Reducción del ciclo total de **17:44 min** (friccional) a **12:45 min** (SLA Target) y **13:11 min** en medición directa, incrementando la capacidad diaria instalada por técnico de **27 a 38 equipos/día** (+39.1% de productividad general). *(Equivalente en ciclo exclusivo de banco/laboratorio Etapas 2 y 3: de 16:42 min a 11:43 min / 28 a 41 equipos/día)*.
+    * **Impacto Operativo (Proceso Unificado de 3 Etapas):** Reducción del ciclo total de **17:44 min** (friccional y peor condicion) a **12:45 min** (SLA Target y mejor condicion) y **13:11 min** en medición directa (en banco de pruebas), incrementando la capacidad diaria instalada por técnico de **27 a 38 equipos/día** (+39.1% de productividad general).
 
 * **Insumos y Herramientas Obligatorias:**
     * **Banco de Pruebas:** Fuente de alimentación 12V / 1.5A, lápiz óptico de limpieza SC/APC, cable coaxial RG6, patch cords de fibra óptica y lector/escáner de código de barras.
@@ -45,12 +45,6 @@ graph TD
         A1[Bloque 1: Encendido Físico <br/> ⏱️ 00:29 min] --> A2[Bloque 2: Smart OLT / SGR <br/> 🚨 05:05 min - CUELLO BOTELLA]
         A2 --> A3[Bloque 3: Banco WiFi / Etiquetado <br/> ⏱️ 00:52 min]
     end
-
-    subgraph ETAPA_3 ["Etapa 3: Acondicionamiento (Estándar Fijo)"]
-        A3 --> A4[Etapa 3: Registro GR, Limpieza y Empaque <br/> ⏱️ 08:23 min]
-    end
-
-    A4 --> A5[Fin Ciclo Inicial: 17:44 min Total c/Fricción <br/> 15:51 min Total Medido]
 ```
 ### 2.2. Escenario Optimizado ("Después" - Con Intervención NOC)
 Tras la intervención con el área de NOC, se optimizó la secuencia de comandos en SmartOLT y se automatizó la depuración de la interfaz PPP 1.1 mediante TR069 en simultáneo, unificando los pasos del banco.
@@ -60,12 +54,6 @@ graph TD
         B1[Bloque 1: Encendido Físico <br/> ⏱️ 00:29 min] --> B2[Bloque 2: Smart OLT / NOC <br/> ✅ 02:33 min - OPTIMIZADO]
         B2 --> B3[Bloque 3: Banco WiFi Consolidado <br/> ⏱️ 00:44 min]
     end
-
-    subgraph ETAPA_3 ["Etapa 3: Acondicionamiento (Estándar Fijo)"]
-        B3 --> B4[Etapa 3: Registro GR, Limpieza y Empaque <br/> ⏱️ 08:23 min]
-    end
-
-    B4 --> B5[Fin Ciclo Optimizado: 12:45 min SLA Target 3 Etapas <br/> 11:43 min Banco/Laboratorio]
 ```
 
 ### 2.3. Sensibilidad de Red y Comparativa de Escenarios (Etapa 2)
@@ -98,8 +86,8 @@ Acoplando las **3 Etapas del Proceso** (`Etapa 1 - Ingreso`: 01:02 min, `Etapa 2
 
 | Escenario | Ingreso y Registro (Etapa 1) | Encendido (Físico) | Smart OLT / GR (Lógico) | Pruebas WiFi / Etiquetado | Acondicionamiento y GR (Etapa 3) | Tiempo Total Medido (3 Etapas) |
 | :--- | :---: | :---: | :--- | :---: | :--- | :---: |
-| **ANTES** | 🟪 1:02 | 🟦 0:29 | 🟥🟥🟥🟥🟥 **5:05** *(Fricción OLT)* | 🟨 0:52 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **15:51 min** |
-| **DESPUÉS** | 🟪 1:02 | 🟦 0:29 | 🟩🟩🟩 **2:33** *(Optimizado NOC)* | 🟨 0:44 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **13:11 min** |
+| **ANTES (Medido)** | 🟪 1:02 | 🟦 0:29 | 🟥🟥🟥🟥🟥 **5:05** *(Fricción OLT)* | 🟨 0:52 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **15:51 min** |
+| **DESPUÉS (Medido)** | 🟪 1:02 | 🟦 0:29 | 🟩🟩🟩 **2:33** *(Optimizado NOC)* | 🟨 0:44 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **13:11 min** |
 
 > **Leyenda Visual:**  
 > 🟪 *Ingreso y registro inicial* | 🟦 *Conexión física* | 🟥 *Fricción sistémica en SmartOLT/GR* | 🟩 *Aprovisionamiento optimizado / Acondicionamiento* | 🟨 *Prueba inalámbrica y etiquetado*
@@ -108,12 +96,17 @@ Acoplando las **3 Etapas del Proceso** (`Etapa 1 - Ingreso`: 01:02 min, `Etapa 2
 
 ## 4. Diagnóstico de Fricciones: Sistema vs. Factor Humano
 
-!!! failure "Fricción Sistémica (Resuelta y Acotada)"
-    **Diagnóstico:** Se confirmó que la baja producción histórica de la Etapa 2 no respondía a la actitud del operario, sino a cuellos de botella en SmartOLT y SGR que inflaban los tiempos en un **+93%** (`06:26 min` frente al target de `03:20 min` como mejor situación). Con la unificación de subtareas y el protocolo NOC, la Etapa 2 se redujo en las mediciones directas de `06:26 min` a **`03:46 min`** (-41.5%). Incluso en el peor escenario de degradación de red (`05:56 min`), el nuevo método supera a la línea base con fricción (`08:19 min`), demostrando que la optimización metodológica protege la producción ante fallas externas.
+!!! failure "Fricción Sistémica (Resuelta)"
+    * **Causa Raíz:** Bloqueos en SmartOLT/SGR inflaban la Etapa 2 en un **+93%** (06:26 min vs. 03:20 min target).
+    * **Acción NOC:** Unificación de subtareas e integración con TR069.
+    * **Resultado:** Etapa 2 reducida a **03:46 min** (-41.5% en medición directa).
+    * **Blindaje:** En degradación de red (05:56 min), el método sigue superando a la línea base previa (08:19 min).
 
-!!! warning "Factor Humano y Fricción Operativa (Bajo Control)"
-    **Diagnóstico:** El acompañamiento auditado reveló que ejecutar cargas administrativas en SGR en medio de las pruebas ópticas dispersaba la atención del operario. Se fijó un estándar de **`08:23 min`** para la Etapa 3 (Acondicionamiento y Cierre), trasladando todo el empaque y registro final a esta fase estandarizada. Con la Etapa 2 optimizada (`03:20 - 03:46 min`), el ciclo completo de las 3 Etapas se fija entre **`12:45 min`** (SLA Target) y **`13:11 min`** (Medición Directa). Cualquier desvío sostenido por encima de estos valores pasa a ser atribuible a micro-pausas, desorden en la mesa o uso del celular.
-
+!!! warning "Factor Humano (Bajo Control)"
+    * **Causa Raíz:** Cargas en SGR en medio de pruebas ópticas dispersaban la atención.
+    * **Acción Operativa:** Traslado de carga y empaque al final (Etapa 3 estandarizada en **08:23 min**).
+    * **SLA Total (3 Etapas):** **12:45 min** (Target Objetivo) | **13:11 min** (Tolerancia Auditada).
+    * **Control RRHH:** Desvíos por encima de la banda son atribuibles exclusivamente a pausas u ocio (Se recomienda acudir al "Diagnóstico Situacional Depósito" para mas información).
 ---
 
 ## 5. Conclusiones y Decisiones Estratégicas
