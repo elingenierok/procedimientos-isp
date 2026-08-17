@@ -31,7 +31,7 @@ El procedimiento integral de recupero y reinserción de equipos en stock se comp
 3. **Etapa 3 - Acondicionamiento Físico y Cierre (`08:23 min`):** Proceso estandarizado de registro en GR (Artículo Usado), sanitizado profundo, inspección y empaquetado en bolsa transparente con transformador (constante física).
 
 ### Diagrama de Flujo General del Proceso
-![Diagrama de Flujo de Recupero de Equipos](../img/FLUJO-PRUE.png)
+![Diagrama de Flujo de Recupero de Equipos](../img/FLUJO-REC-DIAG.png)
 
 > **Delimitación Metodológica:** El presente diagnóstico concentra su análisis exclusivamente en la **Etapa 2 (Prueba en Laboratorio)**, por ser el punto de inflexión donde se intervino la arquitectura de comandos con NOC para erradicar la latencia sistémica.
 
