@@ -96,29 +96,34 @@ Acoplando las **3 Etapas del Proceso** (`Etapa 1 - Ingreso`: 01:02 min, `Etapa 2
 
 ## 4. Diagnóstico de Fricciones: Sistema vs. Factor Humano
 
-!!! failure "Fricción Sistémica (Resuelta)"
-    * **Causa Raíz:** Bloqueos en SmartOLT/SGR inflaban la Etapa 2 en un **+93%** (06:26 min vs. 03:20 min target).
-    * **Acción NOC:** Unificación de subtareas e integración con TR069.
-    * **Resultado:** Etapa 2 reducida a **03:46 min** (-41.5% en medición directa).
-    * **Blindaje:** En degradación de red (05:56 min), el método sigue superando a la línea base previa (08:19 min).
+> **🚨 Fricción Sistémica (Resuelta)**
+> * **Causa Raíz:** Bloqueos en SmartOLT/SGR inflaban la Etapa 2 en un **+93%** (06:26 min vs. 03:20 min target).
+> * **Acción NOC:** Unificación de subtareas e integración con TR069.
+> * **Resultado:** Etapa 2 reducida a **03:46 min** (-41.5% en medición directa).
+> * **Blindaje:** En degradación de red (05:56 min), el método sigue superando a la línea base previa (08:19 min).
 
-!!! warning "Factor Humano (Bajo Control)"
-    * **Causa Raíz:** Cargas en SGR en medio de pruebas ópticas dispersaban la atención.
-    * **Acción Operativa:** Traslado de carga y empaque al final (Etapa 3 estandarizada en **08:23 min**).
-    * **SLA Total (3 Etapas):** **12:45 min** (Target Objetivo) | **13:11 min** (Tolerancia Auditada).
-    * **Control RRHH:** Desvíos por encima de la banda son atribuibles exclusivamente a pausas u ocio (Se recomienda acudir al "Diagnóstico Situacional Depósito" para mas información).
+> **⚠️ Factor Humano (Bajo Control)**
+> * **Causa Raíz:** Cargas en SGR en medio de pruebas ópticas dispersaban la atención.
+> * **Acción Operativa:** Traslado de carga y empaque al final (Etapa 3 estandarizada en **08:23 min**).
+> * **SLA Total (3 Etapas):** **12:45 min** (Target Objetivo) | **13:11 min** (Tolerancia Auditada).
+> * **Control RRHH:** Desvíos por encima de la banda son atribuibles exclusivamente a pausas u ocio *(ver "Diagnóstico Situacional Depósito")*.
 ---
 
 ## 5. Conclusiones y Decisiones Estratégicas
 
-* **1. Imposición del SLA Objetivo y Bandas de Control:** Se fija formalmente como norma de proceso un **SLA Target de 12:45 minutos** por unidad (comprendido por `01:02 min` en Etapa 1, `03:20 min` en Etapa 2 y `08:23 min` en Etapa 3). Para el monitoreo operativo continuo, se establece una banda de tolerancia basada en la medición directa de subtareas de **13:11 minutos por equipo**.
-* **2. Protocolo de Escalamiento Inmediato a NOC:** Queda strictly prohibido que el técnico permanezca en espera pasiva ante bloqueos del sistema. Si la ejecución de un comando en SmartOLT supera los **45 segundos en bucle**, el técnico debe abrir un ticket inmediato a NOC y pasar al diagnóstico del siguiente equipo.
-* **3. Respaldo Técnico para RRHH y Matriz de Producción:** El informe proporciona evidencia cuantitativa para auditar planillas según la velocidad de la red. La capacidad instalada equivalente por técnico (jornada de 8 horas / 480 minutos) para el proceso completo de 3 Etapas se establece en:
-  * **SLA Target (`12:45 min`):** **4.7 equipos/hora** $\rightarrow$ **38 equipos/día**.
-  * **Medición Directa (`13:11 min`):** **4.6 equipos/hora** $\rightarrow$ **36 equipos/día**.
-  * **Peor Escenario - Red Lenta (`15:21 min`):** **3.9 equipos/hora** $\rightarrow$ **31 equipos/día** (piso mínimo garantizado).
-  * **Línea Base Anterior - Con Fricción (`17:44 min`):** **3.4 equipos/hora** $\rightarrow$ **27 equipos/día**.
-* **4. Transferibilidad a Sucursales y Saneamiento de Stock:** La estructura estandarizada en 3 Etapas (`Ingreso`: 01:02 min, `Prueba`: 03:20 min, `Acondicionamiento`: 08:23 min) constituye el insumo principal para el POE definitivo. Esto permitiria replicar la metodología en las sedes regionales sin personal dedicado, garantizando que el stock transferido a los almacenes Principal y Devoluciones sea 100% certero.
+### 5.1. Matriz de Producción Diaria Auditada (Jornada 8h)
+
+| Escenario Operativo | Tiempo Ciclo Total (3 Etapas) | Rendimiento Horario | Capacidad Diaria | Criterio de Control / Auditoría |
+| :--- | :---: | :---: | :---: | :--- |
+| **SLA Target Objetivo** | **12:45 min** | **4.7 eq/h** | **38 eq/día** | Estándar exigible con respuesta normal de red. |
+| **Medición Directa (Tolerancia)** | **13:11 min** | **4.6 eq/h** | **36 eq/día** | Banda de tolerancia continua en banco. |
+| **Piso Garantizado (Red Lenta)** | **15:21 min** | **3.9 eq/h** | **31 eq/día** | Mínimo aceptable ante degradación extrema de sistemas. |
+| *Línea Base Anterior (Con Fricción)* | *17:44 min* | *3.4 eq/h* | *27 eq/día* | Estado previo a la intervención de NOC (-28.9% capacidad). |
+
+### 5.2. Reglas Operativas e Insumos Normativos
+
+* **Protocolo NOC (Máx. 45s):** Prohibido esperar bucles del sistema. Excedido el tiempo límite de 45 segundos en SmartOLT, se escala a NOC y se pasa a la siguiente unidad.
+* **Réplica Regional (POE):** Flujo de 3 Etapas transferible a sucursales sin personal dedicado para asegurar el 100% de trazabilidad de stock en ingresos a almacenes.
 
 ---
 ## Anexo A: Matriz Completa de Tiempos y Procesos de Reinserción
