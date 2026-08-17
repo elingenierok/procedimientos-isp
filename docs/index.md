@@ -1,49 +1,46 @@
-# Mapa Operativo - Suministros y Logística
+# Estructura Operativa - Suministros y Logística
 
 <div class="mermaid">
-graph LR
-    classDef area fill:#0d1117,stroke:#00f3ff,stroke-width:3px,color:#00f3ff,font-weight:bold;
-    classDef subvertical fill:#161b22,stroke:#39ff14,stroke-width:2px,color:#39ff14,font-weight:bold;
-    classDef tarea fill:#161b22,stroke:#8b949e,stroke-width:1px,color:#c9d1d9,border-radius:5px;
+graph TD
+    classDef gerencia fill:#0d1117,stroke:#ffbf00,stroke-width:3px,color:#ffbf00,font-weight:bold;
+    classDef area fill:#161b22,stroke:#00f3ff,stroke-width:2px,color:#00f3ff,font-weight:bold;
+    classDef rol fill:#1f2428,stroke:#39ff14,stroke-width:1px,color:#c9d1d9,border-radius:5px;
 
-    %% Bloque Raíz
-    SL[<b>SUMINISTROS Y LOGÍSTICA</b>]:::area
+    %% Liderazgo
+    GER[<b>👑 Gerente de Suministros y Logística</b><br>Estrategia, Presupuesto (TCO) y KPIs]:::gerencia
 
     %% Sub-Vertical 1
-    subgraph SV1 ["🛒 Compras y Suministros"]
+    subgraph SV1 ["🛒 1. Compras y Suministros"]
         direction TB
-        C1[Gestión de Proveedores]:::tarea
-        C2[Compras Estratégicas]:::tarea
-        C3[Compras Operativas]:::tarea
+        R_COMP[<b>👔 Encargado de Compras</b><br>Compras Estratégicas y Proveedores]:::rol
+        R_ASIS[<b>🗂️ Asistente de Suministros</b><br>Compras Operativas y Soporte]:::rol
     end
 
     %% Sub-Vertical 2
-    subgraph SV2 ["📦 Depósito y Equipamiento"]
+    subgraph SV2 ["📦 2. Depósito y Equipamiento"]
         direction TB
-        D1[Control SGR / SmartOLT]:::tarea
-        D2[Reacondicionamiento ONUs]:::tarea
-        D3[Despacho a Técnicos]:::tarea
-        D4[Auditoría a Sucursales]:::tarea
+        R_MANT[<b>💻 Mantenimiento de Equipamiento</b><br>Flasheo ONUs y Control Stock]:::rol
+        R_SUC[<b>👶 Asistente de Sucursal</b><br>Nexo Operativo y Stock Local]:::rol
+        R_PAS[<b>🤓 Pasante (Trainee)</b><br>Apoyo QA y Logística Inversa]:::rol
     end
 
     %% Sub-Vertical 3
-    subgraph SV3 ["🚚 Flota Vehicular"]
+    subgraph SV3 ["🚚 3. Flota Vehicular"]
         direction TB
-        F1[Mantenimiento Preventivo]:::tarea
-        F2[Control Legal VTV/Seguros]:::tarea
-        F3[Checklist Diario y Consumo]:::tarea
+        R_FLOTA[<b>🚛 Encargado de Flota</b><br>Mantenimiento, VTV, Combustible]:::rol
     end
 
-    %% Conexiones
-    SL ==> SV1
-    SL ==> SV2
-    SL ==> SV3
-    
-    %% Relaciones operativas (Ejemplo: Compras nutre al depósito)
-    SV1 -.->|Ingreso de Mercadería| SV2
+    %% Conexiones Jerárquicas
+    GER ==> SV1
+    GER ==> SV2
+    GER ==> SV3
+
+    %% Conexiones Operativas Internas
+    R_COMP -.->|Delega tareas operativas| R_ASIS
+    R_MANT -.->|Abastece / Audita| R_SUC
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
-  mermaid.initialize({ startOnLoad: true, theme: 'dark', flowchart: { curve: 'basis' } });
+  mermaid.initialize({ startOnLoad: true, theme: 'dark', flowchart: { curve: 'smooth' } });
 </script>
