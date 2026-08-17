@@ -26,10 +26,6 @@
 Este procedimiento interactúa y se complementa con la siguiente información documentada:
 
 * 📄 **[DG-EQU-001: Diagnóstico General de Equipos](link-aqui)**: Detalla los parámetros técnicos de aceptación y rechazo general de equipamiento.
-* 📄 **[DIAG-ONU-001: Diagnóstico Operativo en Banco de Pruebas](link-aqui)**: Define los tiempos estándar (SLA) y la metodología técnica a aplicar durante la fase de reacondicionamiento en laboratorio.
-* 📄 **[PR-COM-001: Procedimiento General de Compras](link-aqui)**: Interviene en caso de requerir reposición de stock por equipos enviados a "Descarte" o compras de accesorios faltantes (ej. fuentes de alimentación).
-
-*(Nota: Reemplazar "link-aqui" por la dirección web o ruta del archivo correspondiente en la intranet/drive de la empresa).*
 
 ---
 
