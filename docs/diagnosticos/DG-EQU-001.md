@@ -23,39 +23,65 @@
 
 ## 2. Desarrollo Técnico del Flujo Operativo
 
-### 2.1. Escenario Inicial ("Antes" - Con Fricción Sistémica)
-En esta fase, la producción se encontraba condicionada por bloqueos en las plataformas informáticas, generando esperas pasivas en el operario.
+### 2.0. Contexto General del Proceso de Recupero (3 Etapas)
+El procedimiento integral de recupero y reinserción de equipos en stock se compone de tres etapas correlativas:
 
-* **Bloque A - Recepción y Conexión Física (`00:51 min`):** Conexión eléctrica (12V/1.5A), limpieza de conector SC/APC, enrosque de coaxial RG6 y escaneo en SGR para ubicación en almacén temporal.
-* **Bloque B - Carga y Aprovisionamiento Lógico (`08:19 min` - CUELLO DE BOTELLA):** Carga de datos en ISP, reemplazo de ONU en SmartOLT, desregistración simultánea en SGR y depuración de interfaz PPP 1.1. **Causa de la falla:** Comandos bloqueados en SmartOLT y SGR (plataformas "girando" en espera de respuesta de la OLT física).
-* **Bloque C - Pruebas Operativas y Etiquetado (`00:44 min`):** Lectura de potencia óptica, configuración de SSID/Password local (2.4/5GHz), test de velocidad inalámbrico, impresión de etiqueta térmica y transferencia simplificada en sistema.
-* **Bloque D - Acondicionamiento y Cierre Administrativo (`08:23 min`):** Registro de cambio de condición (Artículo Usado/Nuevo) en SGR, limpieza profunda del chasis, inspección física y empaquetado en bolsa transparente con transformador.
-* **Tiempo Total Inicial:** **16:42 minutos por unidad** (~28 equipos/día).
+1. **Etapa 1 - Ingreso y Registro Inicial (`01:02 min`):** Transferencia simplificada y carga inicial en el sistema de registro (constante operativa).
+2. **Etapa 2 - Prueba en Laboratorio (Foco del Diagnóstico):** Secuencia técnica de encendido, aprovisionamiento lógico en SmartOLT, desvinculación en SGR y pruebas inalámbricas/ópticas.
+3. **Etapa 3 - Acondicionamiento Físico y Cierre (`08:23 min`):** Proceso estandarizado de registro en GR (Artículo Usado), sanitizado profundo, inspección y empaquetado en bolsa transparente con transformador (constante física).
+
+> **Delimitación Metodológica:** El presente diagnóstico concentra su análisis exclusivamente en la **Etapa 2 (Prueba en Laboratorio)**, por ser el punto de inflexión donde se intervino la arquitectura de comandos con NOC para erradicar la latencia sistémica.
+
+---
+
+### 2.1. Escenario Inicial ("Antes" - Con Fricción Sistémica)
+En esta fase, los tiempos del banco de pruebas se encontraban severamente inflados por bloqueos y bucles de espera pasiva en las plataformas informáticas (SmartOLT y SGR).
+
+* **Bloque 1: Encendido y Conexión Física (`00:29 min`):** Conexión eléctrica (12V/1.5A), limpieza de conector SC/APC con lápiz óptico y enrosque de coaxial RG6.
+* **Bloque 2: Smart OLT / SGR - Aprovisionamiento Lógico (`05:05 min` - CUELLO DE BOTELLA):** Reemplazo de ONU, borrado de asignación lógica, resincronización de alta y eliminación manual de la interfaz PPP 1.1. **Causa de Fricción:** Bucle de comandos en SmartOLT y SGR "girando" en espera de respuesta de la OLT física.
+* **Bloque 3: Banco de Pruebas / WiFi (`00:52 min`):** Test de velocidad inalámbrico, impresión/pegado de etiqueta térmica y transferencia simplificada en sistema.
+* **Tiempo Medido por Suma de Bloques:** **`06:26 minutos`**. *(En jornadas de alta saturación de red, las demoras elevaban esta etapa a **`08:19 minutos`**)*.
+
+---
 
 ### 2.2. Escenario Optimizado ("Después" - Con Intervención NOC)
-Se articuló una solución técnica con el área de NOC para eliminar las colas de espera en TR069 y corregir la ejecución de comandos en SmartOLT, eliminando la latencia en el banco de pruebas.
+Tras la intervención con el área de NOC, se optimizó la secuencia de comandos en SmartOLT y se automatizó la depuración de la interfaz PPP 1.1 mediante TR069 en simultáneo, unificando los pasos del banco.
 
-* **Explicación de la Mejora:** Se sustituyó el procedimiento manual de espera pasiva por un protocolo de alta directa y depuración de la interfaz PPP 1.1.
-* **Nuevo Bloque B Reemplazante (`03:20 min`):** Carga fluida de datos en ISP, ejecución inmediata de reemplazo en SmartOLT, resincronización lógica directa y desvinculación limpia en SGR sin bucles de red.
-* **Tiempo Total Optimizado:** **11:43 minutos por unidad** (~41 equipos/día). *(Los Bloques A, C y D se mantuvieron estables en sus tiempos base)*.
+* **Bloque 1: Encendido y Conexión Física (`00:29 min`):** Se mantiene el estándar técnico constante de conexión física.
+* **Bloque 2: Smart OLT / SGR - Aprovisionamiento Lógico (`02:33 min` - OPTIMIZADO):** Ejecucción fluida de reemplazo, borrado y resincronización lógica en SmartOLT sin bucles de espera, absorbiendo la desregistración en SGR y TR069 en paralelo.
+* **Bloque 3: Banco de Pruebas / WiFi (`00:44 min` - CONSOLIDADO):** Flujo unificado de lectura de potencia óptica, test de velocidad inalámbrico, etiquetado y transferencia directa.
+* **Tiempo Medido por Suma de Bloques:** **`03:46 minutos`** (-41.5% de tiempo de banco). *(En condiciones óptimas de respuesta de red, el estándar target se fija en **`03:20 minutos`**)*.
 
-### 2.3. Diagramas de Flujo Comparativos
+---
 
+### 2.3. Diagramas de Flujo Comparativos (Etapa 2 y Cierre de Laboratorio)
+
+#### Escenario Inicial ("Antes")
 ```mermaid
 graph TD
-    subgraph ANTES ["🚨 Escenario Inicial (16:42 min)"]
-        A1[Bloque A: Conexión <br/> 00:51 min] --> A2[Bloque B: SmartOLT/SGR <br/> 08:19 min - CUELLO DE BOTELLA]
-        A2 --> A3[Bloque C: Test WiFi <br/> 00:44 min]
-        A3 --> A4[Bloque D: Acondicionado <br/> 08:23 min]
+    subgraph ETAPA_2 ["🚨 Etapa 2: Prueba en Laboratorio (06:26 min medidos / 08:19 min c/fricción)"]
+        A1[Bloque 1: Encendido Físico <br/> ⏱️ 00:29 min] --> A2[Bloque 2: Smart OLT / SGR <br/> 🚨 05:05 min - CUELLO BOTELLA]
+        A2 --> A3[Bloque 3: Banco WiFi / Etiquetado <br/> ⏱️ 00:52 min]
     end
+
+    subgraph ETAPA_3 ["Etapa 3: Acondicionamiento (Estándar Fijo)"]
+        A3 --> A4[Etapa 3: Registro GR, Limpieza y Empaque <br/> ⏱️ 08:23 min]
+    end
+
+    A4 --> A5[Fin Ciclo Inicial: 16:42 min Total]
 ```
 ```mermaid
 graph TD
-    subgraph DESPUES ["✅ Escenario Optimizado (11:43 min)"]
-        B1[Bloque A: Conexión <br/> 00:51 min] --> B2[Bloque B: SmartOLT/NOC <br/> 03:20 min - OPTIMIZADO]
-        B2 --> B3[Bloque C: Test WiFi <br/> 00:44 min]
-        B3 --> B4[Bloque D: Acondicionado <br/> 08:23 min]
+    subgraph ETAPA_2 ["✅ Etapa 2: Prueba en Laboratorio (03:46 min medidos / 03:20 min Target)"]
+        B1[Bloque 1: Encendido Físico <br/> ⏱️ 00:29 min] --> B2[Bloque 2: Smart OLT / NOC <br/> ✅ 02:33 min - OPTIMIZADO]
+        B2 --> B3[Bloque 3: Banco WiFi Consolidado <br/> ⏱️ 00:44 min]
     end
+
+    subgraph ETAPA_3 ["Etapa 3: Acondicionamiento (Estándar Fijo)"]
+        B3 --> B4[Etapa 3: Registro GR, Limpieza y Empaque <br/> ⏱️ 08:23 min]
+    end
+
+    B4 --> B5[Fin Ciclo Optimizado: 11:43 min SLA Target]
 ```
 ## 3. Matriz Comparativa de Tiempos y Capacidad
 
