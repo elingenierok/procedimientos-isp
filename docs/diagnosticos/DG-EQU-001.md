@@ -71,38 +71,42 @@ graph TD
 ```
 
 ### 2.3. Sensibilidad de Red y Comparativa de Escenarios (Etapa 2)
-Para demostrar la solidez del avance logrado, se evaluó el comportamiento de la **Etapa 2** bajo distintas condiciones de respuesta del sistema[cite: 1]:
+Para demostrar la solidez del avance logrado, se evaluó el comportamiento de la **Etapa 2** bajo distintas condiciones de respuesta del sistema:
 
 | Escenario Evaluado en Etapa 2 | Tiempo Etapa 2 | Comparativa vs. "Antes" Medido (`06:26 min`) | Comparativa vs. "Antes" Friccional (`08:19 min`) | Diagnóstico de Avance Operativo |
 | :--- | :---: | :---: | :---: | :--- |
-| **Mejor Escenario (SLA Target Objetivo)** | **`03:20 min`**[cite: 1] | **-48.2%** (`-03:06 min`)[cite: 1] | **-59.9%** (`-04:59 min`)[cite: 1] | Respuesta rápida del sistema y flujo continuo de comandos[cite: 1]. |
-| **Escenario Medido Directo (Suma Bloques)** | **`03:46 min`**[cite: 1] | **-41.5%** (`-02:40 min`)[cite: 1] | **-54.7%** (`-04:33 min`)[cite: 1] | Tiempo promedio cronometrado durante el ensayo auditado[cite: 1]. |
-| **Peor Escenario (Sistema Lento / +85% Red)** | **`05:56 min`**[cite: 1] | **-7.8%** (`-00:30 min`)[cite: 1] | **-28.7%** (`-02:23 min`)[cite: 1] | **Punto Clave:** Aun en degradación extrema de red, la mejora supera al "Antes" friccional[cite: 1]. |
+| **Mejor Escenario (SLA Target Objetivo)** | **`03:20 min`** | **-48.2%** (`-03:06 min`) | **-59.9%** (`-04:59 min`) | Respuesta rápida del sistema y flujo continuo de comandos. |
+| **Escenario Medido Directo (Suma Bloques)** | **`03:46 min`** | **-41.5%** (`-02:40 min`) | **-54.7%** (`-04:33 min`) | Tiempo promedio cronometrado durante el ensayo auditado. |
+| **Peor Escenario (Sistema Lento / +85% Red)** | **`05:56 min`** | **-7.8%** (`-00:30 min`) | **-28.7%** (`-02:23 min`) | **Punto Clave:** Aun en degradación extrema de red, la mejora supera al "Antes" friccional. |
 
-> **Conclusión de Avance:** Incluso en el **Peor Escenario** (`05:56 min`)[cite: 1], el nuevo método de trabajo ahorra **`02:23 minutos` por unidad** respecto a la situación inicial con fricción (`08:19 min`)[cite: 1], demostrando que la optimización metodológica protege la operación ante caídas de la plataforma.
+> **Conclusión de Avance:** Incluso en el **Peor Escenario** (`05:56 min`), el nuevo método de trabajo ahorra **`02:23 minutos` por unidad** respecto a la situación inicial con fricción (`08:19 min`), demostrando que la optimización metodológica protege la operación ante caídas de la plataforma.
 
 ---
 
 ## 3. Impacto en el Ciclo Total del Laboratorio y Capacidad Diaria
-Acoplando la **Etapa 3** (`08:23 min` fijos), la capacidad instalada por técnico (jornada de 8 horas) evoluciona de la siguiente manera:
 
-* **Línea Base Inicial ("Antes" Friccional):** `16:42 min` ciclo total $\rightarrow$ **28 equipos / día**.
-* **Escenario Medido ("Después" Bloques):** `12:09 min` ciclo total $\rightarrow$ **39 equipos / día** (+37.0% capacidad).
-* **Mejor Escenario ("Después" SLA Target):** `11:43 min` ciclo total $\rightarrow$ **41 equipos / día** (+42.5% capacidad).
+Acoplando las **3 Etapas del Proceso** (`Etapa 1 - Ingreso`: 01:02 min, `Etapa 2 - Prueba`: variable según respuesta del sistema, y `Etapa 3 - Acondicionamiento`: 08:23 min fijos), la capacidad instalada equivalente por técnico (jornada laboral de 8 horas / 480 minutos) evoluciona de la siguiente manera:
+
+* **Línea Base Inicial ("Antes" Friccional):** `17:44 min` ciclo total (`01:02` + `08:19` + `08:23`) $\rightarrow$ **27 equipos / día** (3.4 eq/hora).
+* **Peor Escenario ("Después" Red Lenta):** `15:21 min` ciclo total (`01:02` + `05:56` + `08:23`) $\rightarrow$ **31 equipos / día** (+15.5% capacidad / 3.9 eq/hora).
+* **Escenario Medido Directo (Suma Subtareas):** `13:11 min` ciclo total (`01:02` + `03:46` + `08:23`) $\rightarrow$ **36 equipos / día** (+34.5% capacidad / 4.6 eq/hora).
+* **Mejor Escenario ("Después" SLA Target):** `12:45 min` ciclo total (`01:02` + `03:20` + `08:23`) $\rightarrow$ **38 equipos / día** (+39.1% capacidad / 4.7 eq/hora).
+
+> **Aclaración Metodológica:** Las tres etapas pueden ejecutarse de forma independiente y secuencial. Los valores expuestos representan el **tiempo de ciclo equivalente por unidad individual** para completar el flujo completo de reinserción. En la práctica operativa, la ejecución por **lotes de equipos** permite amortizar tiempos de traslado y maximizar el rendimiento general del laboratorio.
 
 ---
 
-### 3.1 Comparativo Visual de Tiempos por Etapa
+### 3.1. Comparativo Visual de Tiempos Medidos por Subtarea (3 Etapas)
 
-### Comparativo Visual de Tiempos Medidos por Subtarea
-
-| Escenario | Encendido (Físico) | Smart OLT / GR (Lógico) | Pruebas WiFi / Etiquetado | Acondicionamiento y GR | Tiempo Total Medido |
-| :--- | :---: | :--- | :---: | :--- | :---: |
-| **ANTES** | 🟦 0:29 | 🟥🟥🟥🟥🟥 **5:05** *(Fricción OLT)* | 🟨 0:52 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **14:49 min** |
-| **DESPUÉS** | 🟦 0:29 | 🟩🟩🟩 **2:33** *(Optimizado NOC)* | 🟨 0:44 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **12:09 min** |
+| Escenario | Ingreso y Registro (Etapa 1) | Encendido (Físico) | Smart OLT / GR (Lógico) | Pruebas WiFi / Etiquetado | Acondicionamiento y GR (Etapa 3) | Tiempo Total Medido (3 Etapas) |
+| :--- | :---: | :---: | :--- | :---: | :--- | :---: |
+| **ANTES** | 🟪 1:02 | 🟦 0:29 | 🟥🟥🟥🟥🟥 **5:05** *(Fricción OLT)* | 🟨 0:52 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **15:51 min** |
+| **DESPUÉS** | 🟪 1:02 | 🟦 0:29 | 🟩🟩🟩 **2:33** *(Optimizado NOC)* | 🟨 0:44 | 🟩🟩🟩🟩🟩🟩🟩🟩 **8:23** | **13:11 min** |
 
 > **Leyenda Visual:**  
-> 🟦 *Conexión física* | 🟥 *Fricción sistémica en SmartOLT/GR* | 🟩 *Aprovisionamiento optimizado / Acondicionamiento* | 🟨 *Prueba inalámbrica y etiquetado*
+> 🟪 *Ingreso y registro inicial* | 🟦 *Conexión física* | 🟥 *Fricción sistémica en SmartOLT/GR* | 🟩 *Aprovisionamiento optimizado / Acondicionamiento* | 🟨 *Prueba inalámbrica y etiquetado*
+
+---
 
 ## 4. Diagnóstico de Fricciones: Sistema vs. Factor Humano
 
@@ -110,32 +114,36 @@ Acoplando la **Etapa 3** (`08:23 min` fijos), la capacidad instalada por técnic
     **Diagnóstico:** Se confirmó que la baja producción histórica de la Etapa 2 no respondía a la actitud del operario, sino a cuellos de botella en SmartOLT y SGR que inflaban los tiempos en un **+93%** (`06:26 min` frente al target de `03:20 min` como mejor situación). Con la unificación de subtareas y el protocolo NOC, la Etapa 2 se redujo en las mediciones directas de `06:26 min` a **`03:46 min`** (-41.5%). Incluso en el peor escenario de degradación de red (`05:56 min`), el nuevo método supera a la línea base con fricción (`08:19 min`), demostrando que la optimización metodológica protege la producción ante fallas externas.
 
 !!! warning "Factor Humano y Fricción Operativa (Bajo Control)"
-    **Diagnóstico:** El acompañamiento auditado reveló que ejecutar cargas administrativas en SGR en medio de las pruebas ópticas dispersaba la atención del operario. Se fijó un estándar de **`08:23 min`** para la Etapa 3 (Acondicionamiento y Cierre), trasladando todo el empaque y registro final a esta fase estandarizada. Con la Etapa 2 optimizada (`03:20 - 03:46 min`), el ciclo completo de laboratorio se fija entre **`11:43 min`** (SLA Target) y **`12:09 min`** (Medición Directa). Cualquier desvío sostenido por encima de estos valores pasa a ser atribuible a micro-pausas, desorden en la mesa o uso del celular.
+    **Diagnóstico:** El acompañamiento auditado reveló que ejecutar cargas administrativas en SGR en medio de las pruebas ópticas dispersaba la atención del operario. Se fijó un estándar de **`08:23 min`** para la Etapa 3 (Acondicionamiento y Cierre), trasladando todo el empaque y registro final a esta fase estandarizada. Con la Etapa 2 optimizada (`03:20 - 03:46 min`), el ciclo completo de las 3 Etapas se fija entre **`12:45 min`** (SLA Target) y **`13:11 min`** (Medición Directa). Cualquier desvío sostenido por encima de estos valores pasa a ser atribuible a micro-pausas, desorden en la mesa o uso del celular.
 
 ---
+
 ## 5. Conclusiones y Decisiones Estratégicas
 
-* **1. Imposición del SLA Objetivo y Bandas de Control:** Se fija formalmente como norma de laboratorio un **SLA Target de 11:43 minutos** por unidad (comprendido por `03:20 min` en Etapa 2 y `08:23 min` en Etapa 3). Para el monitoreo operativo continuo, se establece una banda de tolerancia basada en la medición directa de subtareas de **12:09 minutos por equipo**.
-* **2. Protocolo de Escalamiento Inmediato a NOC:** Queda estrictamente prohibido que el técnico permanezca en espera pasiva ante bloqueos del sistema. Si la ejecución de un comando en SmartOLT supera los **45 segundos en bucle**, el técnico debe abrir un ticket inmediato a NOC y pasar al diagnóstico del siguiente equipo.
-* **3. Respaldo Técnico para RRHH y Matriz de Producción:** El informe proporciona evidencia cuantitativa para auditar planillas según la velocidad de la red. La capacidad instalada por técnico (jornada de 8 horas / 480 minutos) se establece en:
-  * **SLA Target (`11:43 min`):** **5.1 equipos/hora** $\rightarrow$ **41 equipos/día**.
-  * **Medición Directa (`12:09 min`):** **4.9 equipos/hora** $\rightarrow$ **39-40 equipos/día**.
-  * **Peor Escenario - Red Lenta (`14:19 min`):** **4.2 equipos/hora** $\rightarrow$ **33-34 equipos/día** (piso mínimo garantizado).
-  * **Línea Base Anterior - Con Fricción (`16:42 min`):** **3.6 equipos/hora** $\rightarrow$ **28-29 equipos/día**.
-* **4. Transferibilidad a Sucursales y Saneamiento de Stock:** La estructura estandarizada en 3 Etapas (`Ingreso`: 01:02 min, `Prueba`: 03:20 min, `Acondicionamiento`: 08:23 min) constituye el insumo principal para el POE definitivo. Esto permitirá replicar la metodología en las sedes regionales sin personal dedicado, garantizando que el stock transferido a los almacenes Principal y Devoluciones sea 100% certero.
+* **1. Imposición del SLA Objetivo y Bandas de Control:** Se fija formalmente como norma de proceso un **SLA Target de 12:45 minutos** por unidad (comprendido por `01:02 min` en Etapa 1, `03:20 min` en Etapa 2 y `08:23 min` en Etapa 3). Para el monitoreo operativo continuo, se establece una banda de tolerancia basada en la medición directa de subtareas de **13:11 minutos por equipo**.
+* **2. Protocolo de Escalamiento Inmediato a NOC:** Queda strictly prohibido que el técnico permanezca en espera pasiva ante bloqueos del sistema. Si la ejecución de un comando en SmartOLT supera los **45 segundos en bucle**, el técnico debe abrir un ticket inmediato a NOC y pasar al diagnóstico del siguiente equipo.
+* **3. Respaldo Técnico para RRHH y Matriz de Producción:** El informe proporciona evidencia cuantitativa para auditar planillas según la velocidad de la red. La capacidad instalada equivalente por técnico (jornada de 8 horas / 480 minutos) para el proceso completo de 3 Etapas se establece en:
+  * **SLA Target (`12:45 min`):** **4.7 equipos/hora** $\rightarrow$ **38 equipos/día**.
+  * **Medición Directa (`13:11 min`):** **4.6 equipos/hora** $\rightarrow$ **36 equipos/día**.
+  * **Peor Escenario - Red Lenta (`15:21 min`):** **3.9 equipos/hora** $\rightarrow$ **31 equipos/día** (piso mínimo garantizado).
+  * **Línea Base Anterior - Con Fricción (`17:44 min`):** **3.4 equipos/hora** $\rightarrow$ **27 equipos/día**.
+* **4. Transferibilidad a Sucursales y Saneamiento de Stock:** La estructura estandarizada en 3 Etapas (`Ingreso`: 01:02 min, `Prueba`: 03:20 min, `Acondicionamiento`: 08:23 min) constituye el insumo principal para el POE definitivo. Esto permitiria replicar la metodología en las sedes regionales sin personal dedicado, garantizando que el stock transferido a los almacenes Principal y Devoluciones sea 100% certero.
 
 ---
-## Anexo A: Reevaluación de Tiempos Medidos por Bloque (Justificación de Datos)
+## Anexo A: Matriz Completa de Tiempos y Procesos de Reinserción
 
-A continuación se presenta la matriz detallada que respalda el consolidado numérico de la **Etapa 2**, mostrando la evolución exacta de cada subproceso unificado[cite: 1]:
+Matriz consolidada de tiempos por etapa y subtarea para el procedimiento integral de recupero y reinserción de equipos ONU/Router CATV:
 
-| Bloque Operativo | Subtareas Unificadas en la Medición | Tiempo "Antes" | Tiempo "Después" | Variación Absoluta | % de Ahorro |
-| :--- | :--- | :---: | :---: | :---: | :---: |
-| **Bloque 1: Encendido** | Enchufar transformador 12V/1.5A + Limpiar conector SC/APC con lápiz óptico + Enroscar RG6[cite: 1]. | `00:29 min`[cite: 1] | `00:29 min`[cite: 1] | `00:00 min`[cite: 1] | **0.0%**[cite: 1] |
-| **Bloque 2: Smart OLT / GR** | Reemplazo de ONU + Eliminar asignación + Resincronización lógica + Desregistro SGR + Depuración PPP 1.1 vía TR069[cite: 1]. | `05:05 min`[cite: 1] | `02:33 min`[cite: 1] | `-02:32 min`[cite: 1] | **-49.8%**[cite: 1] |
-| **Bloque 3: Banco WiFi / Etiquetado** | Copiar potencia óptica + Test de velocidad inalámbrico + Impresión/pegado etiqueta térmica + Transferencia simplificada[cite: 1]. | `00:52 min`[cite: 1] | `00:44 min`[cite: 1] | `-00:08 min`[cite: 1] | **-15.4%**[cite: 1] |
-| **TOTAL ETAPA 2** | **Suma Directa de Bloques Cronometrados en Banco** | **`06:26 min`**[cite: 1] | **`03:46 min`**[cite: 1] | **`-02:40 min`**[cite: 1] | **-41.5%**[cite: 1] |
-
+| Etapa del Proceso | Proceso / Bloque | Subtareas Unificadas | Tiempo "Antes" | Tiempo "Después" | Observaciones y Descripción Técnica |
+| :--- | :--- | :--- | :---: | :---: | :--- |
+| **1) Ingreso** | **Registro Inicial** | Ubicación en SGR + Carga de datos en ISP | `01:02 min` | `01:02 min` | Escaneo en ALMACÉN y registro de S/N, modelo y responsable de devolución. |
+| **2) Prueba en Laboratorio** | **Encendido** | Conexión eléctrica, fibra óptica y RG6 | `00:29 min` | `00:29 min` | Conexión a fuente 12V/1.5A, limpieza SC/APC y enrosque coaxial RG6. |
+| | **Smart OLT / GR** | Reemplazo, borrado, resincronización y TR069 | `05:05 min` | `02:33 min` | En "Antes" sufría bucles por respuesta de la OLT. Optimizado por método NOC. |
+| | **Banco WiFi / Etiqueta** | Potencia óptica, test WiFi, etiqueta y transferencia | `00:52 min` | `00:44 min` | Medición de potencia, prueba inalámbrica, etiquetado y derivación a almacén. |
+| **SUBTOTAL ETAPA 2** | **Prueba en Banco** | **Suma Directa Medida (Laboratorio)** | **`06:26 min`** | **`03:46 min`** | **Optimización del -41.5% (-02:40 min de trabajo técnico en banco).** |
+| *Ref. Escenarios Etapa 2* | *Rango de Respuesta* | *SLA Target Objetivo / Red Lenta (+85%)* | *`08:19 min` (Fricción)* | *`03:20 min` (Target)* | *Piso mínimo garantizado con red lenta: `05:56 min`.* |
+| **3) Acondicionamiento** | **Sistema y Físico** | Carga USADO en SGR + Limpieza + Empaquetado | `08:23 min` | `08:23 min` | Cambio de estado en GR, sanitizado de chasis y embolsado c/transformador. |
+| **CICLO COMPLETO** | **3 Etapas Unificadas** | **Total Proceso Individual Equivalente** | **`15:51 min`** | **`13:11 min`** | **Ahorro neto de -02:40 min por unidad en el flujo integral (36 equipos/día).** |
 ## 6. Historial de Control de Cambios
 
 | Versión | Fecha | Descripción de la Modificación | Autor |
