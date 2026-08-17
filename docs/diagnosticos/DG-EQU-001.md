@@ -6,18 +6,18 @@
 
 ## 1. Marco Introductorio y Requisitos Previos
 
-**Objetivo:** Diagnosticar formalmente la operación de prueba técnica, verificación física y clasificación en laboratorio de las ONUs CATV. El propósito es identificar cuellos de botella sistémicos versus ineficiencias del factor humano, estableciendo una línea base real de tiempos para la construcción del Procedimiento Operativo Estandarizado (POE).
+**Objetivo:** Diagnosticar formalmente la operación de prueba técnica, verificación física y clasificación en laboratorio de las ONUs CATV (ZTE F6600R). El propósito es identificar cuellos de botella sistémicos versus ineficiencias del factor humano, estableciendo una línea base real de tiempos para la construcción del Procedimiento Operativo Estandarizado (POE).
 
 * **Resumen Ejecutivo del Trabajo Realizado:**
     * **Metodología:** Relevamiento integral de 2.5 días bajo la modalidad de trabajo auditado en pareja.
-    * **Desglose de Variables:** Discriminación entre la eficiencia del técnico y la latencia propia de las plataformas informáticas de gestión.
-    * **Resultados Obtenidos:** Resolución de falla de parametrización en SmartOLT junto al área de NOC, reduciendo el aprovisionamiento lógico de **08:19 min** a **03:20 min**.
-    * **Impacto Operativo:** Reducción del ciclo total de **16:42 min** a **11:43 min** (-30%), incrementando la capacidad diaria por técnico en **+46.4%** (de 28 a 41 equipos/día).
+    * **Desglose de Variables:** Discriminación entre la eficiencia propia del técnico y la latencia generada por la infraestructura de software.
+    * **Resultados Obtenidos:** Optimización de la secuencia de comandos en SmartOLT y automatización de la interfaz PPP 1.1 vía TR069 junto a NOC, reduciendo el tiempo de la Etapa 2 (Pruebas en Banco) de `08:19 min` (friccional) a **`03:20 min`** (SLA Target), y de `06:26 min` a **`03:46 min`** en medición directa por subtareas (-41.5%).
+    * **Impacto Operativo (Ciclo de Laboratorio - Etapas 2 y 3):** Reducción del ciclo total de **16:42 min** a **11:43 min** (-29.8% $\approx -30\%$), incrementando la capacidad diaria instalada por técnico de **28 a 41 equipos/día** (+42.5% exacto / +46.4% sobre enteros redondeados). *(Suma de las 3 Etapas unificadas: de 17:44 min a 12:45 min / 27 a 38 equipos/día)*.
 
 * **Insumos y Herramientas Obligatorias:**
-    * **Banco de Pruebas:** Fuente de alimentación 12V / 1.5A, lápiz óptico de limpieza SC/APC, cable coaxial RG6, patch cords de fibra.
-    * **Sistemas / Software:** Plataforma SmartOLT, Sistema de Gestión Real (SGR), Sistema de carga y prueba (planilla de registro), gestión TR069.
-    * **EPP y Seguridad:** Guantes para limpieza y manipulación de equipos.
+    * **Banco de Pruebas:** Fuente de alimentación 12V / 1.5A, lápiz óptico de limpieza SC/APC, cable coaxial RG6, patch cords de fibra óptica y lector/escáner de código de barras.
+    * **Sistemas / Software:** Plataforma SmartOLT, Sistema de Gestión Real (SGR), Sistema de carga y prueba (ISP / planilla de registro) y gestión TR069.
+    * **EPP y Seguridad:** Guantes de protección para limpieza, desinfección y manipulación de equipos.
 
 ---
 
@@ -144,9 +144,11 @@ Matriz consolidada de tiempos por etapa y subtarea para el procedimiento integra
 | *Ref. Escenarios Etapa 2* | *Rango de Respuesta* | *SLA Target Objetivo / Red Lenta (+85%)* | *`08:19 min` (Fricción)* | *`03:20 min` (Target)* | *Piso mínimo garantizado con red lenta: `05:56 min`.* |
 | **3) Acondicionamiento** | **Sistema y Físico** | Carga USADO en SGR + Limpieza + Empaquetado | `08:23 min` | `08:23 min` | Cambio de estado en GR, sanitizado de chasis y embolsado c/transformador. |
 | **CICLO COMPLETO** | **3 Etapas Unificadas** | **Total Proceso Individual Equivalente** | **`15:51 min`** | **`13:11 min`** | **Ahorro neto de -02:40 min por unidad en el flujo integral (36 equipos/día).** |
-## 6. Historial de Control de Cambios
+
+### Historial de Control de Cambios
 
 | Versión | Fecha | Descripción de la Modificación | Autor |
 | :--- | :--- | :--- | :--- |
-| 0.1 | 16/08/2026 | Medición inicial con fricción de sistema (16:42 min total). | Auditoría de Laboratorio |
-| 1.0 | 16/08/2026 | Optimización de SmartOLT c/NOC y fijación de SLA (11:43 min total). | Jefatura de Depósito / S&L |
+| **0.1** | 16/08/2026 | Medición inicial con fricción de sistema (`16:42 min` ciclo laboratorio / `08:19 min` Etapa 2). | Auditoría de Laboratorio |
+| **0.2** | 16/08/2026 | Desglose en 3 Etapas independientes y unificación de subtareas por bloques funcionales (`06:26 min` medido en Etapa 2). | Jefatura de Depósito / S&L |
+| **1.0** | 17/08/2026 | Optimización de SmartOLT c/NOC, automatización TR069 y fijación de SLA Target (`11:43 min` ciclo / `03:20 min` Etapa 2). | Jefatura de Depósito / S&L |
