@@ -12,13 +12,13 @@
 A continuación, se detalla la estructura organizativa del área, liderada por la Gerencia y dividida en tres grandes verticales operativas.
 
 ```mermaid
-graph TD
+graph LR
     classDef gerencia fill:#0d1117,stroke:#ffbf00,stroke-width:2px,color:#ffbf00,font-weight:bold;
     classDef area fill:#161b22,stroke:#00f3ff,stroke-width:2px,color:#00f3ff,font-weight:bold;
     classDef rol fill:#1f2428,stroke:#39ff14,stroke-width:1px,color:#c9d1d9,border-radius:5px;
 
     %% Liderazgo
-    GER["<b>👑 Gerente de Suministros y Logística</b><br>Estrategia, Presupuesto (TCO) y KPIs"]:::gerencia
+    GER["<b> Gerente de Suministros y Logística</b><br>Estrategia, Presupuesto (TCO) y KPIs"]:::gerencia
 
     %% Sub-Vertical 1
     subgraph SV1 ["🛒 1. Compras y Suministros"]
@@ -31,8 +31,7 @@ graph TD
     subgraph SV2 ["📦 2. Depósito y Equipamiento"]
         direction TB
         R_MANT["<b>💻 Mantenimiento de Equipamiento</b><br>Flasheo ONUs y Control Stock"]:::rol
-        R_SUC["<b>👶 Asistente de Sucursal</b><br>Nexo Operativo y Stock Local"]:::rol
-        end
+    end
 
     %% Sub-Vertical 3
     subgraph SV3 ["🚚 3. Flota Vehicular"]
@@ -46,10 +45,9 @@ graph TD
         R_SUC["<b>👶 Asistente de Sucursal</b><br>Nexo Operativo y Stock Local"]:::rol
     end
 
-    %% Conexiones Jerárquicas
-    GER ==> SV1
-    GER ==> SV2
-    GER ==> SV3
- GER ==> SV4
+    %% Conexiones de Interacción (Líneas de puntos)
+    R_ASIS -.->|Interacción constante| SV2
+    R_ASIS -.->|Interacción constante| SV3
+    R_ASIS -.->|Interacción constante| SV4
 
    ```
