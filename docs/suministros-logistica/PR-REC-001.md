@@ -21,7 +21,19 @@
 
 ---
 
-## 2. Matriz RACI y Descripción de Pasos
+## 2. Documentos Relacionados y Referencias
+
+Este procedimiento interactúa y se complementa con la siguiente información documentada:
+
+* 📄 **[DG-EQU-001: Diagnóstico General de Equipos](link-aqui)**: Detalla los parámetros técnicos de aceptación y rechazo general de equipamiento.
+* 📄 **[DIAG-ONU-001: Diagnóstico Operativo en Banco de Pruebas](link-aqui)**: Define los tiempos estándar (SLA) y la metodología técnica a aplicar durante la fase de reacondicionamiento en laboratorio.
+* 📄 **[PR-COM-001: Procedimiento General de Compras](link-aqui)**: Interviene en caso de requerir reposición de stock por equipos enviados a "Descarte" o compras de accesorios faltantes (ej. fuentes de alimentación).
+
+*(Nota: Reemplazar "link-aqui" por la dirección web o ruta del archivo correspondiente en la intranet/drive de la empresa).*
+
+---
+
+## 3. Matriz RACI y Descripción de Pasos
 
 | Paso | Actividad / Descripción | Responsable (R) | Aprueba (A) | Consultado (C) | Informado (I) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -36,20 +48,20 @@
 
 ---
 
-## 3. Reglas Operativas del Proceso
+## 4. Reglas Operativas del Proceso
 
 * **Regla 1 / Ventana Horaria de Procesamiento:** El triaje, diagnóstico y acondicionamiento de los equipos recibidos debe ejecutarse dentro de las 48 horas hábiles posteriores a su ingreso físico en el depósito de Suministros.
 * **Regla 2 / Trazabilidad Sistémica Estricta:** Todo movimiento físico de los equipos (a Devoluciones, Principal o Descarte) debe estar respaldado por su correspondiente transferencia en tiempo real en Gestión Real y Smart OLT. El inventario físico debe coincidir al 100% con el sistema.
 
 ---
 
-## 4. Diagrama de Flujo del Proceso
+## 5. Diagrama de Flujo del Proceso
 
 ![Diagrama de Flujo de Recupero de Equipos](../img/FLUJO-PRUE.png)
 
 ---
 
-## 5. Gestión de Excepciones
+## 6. Gestión de Excepciones
 
 !!! warning "Excepción 1: Inconsistencia de Trazabilidad en Sistema (Serial no coincide o no existe)"
     **Escenario:** El equipo ingresa físicamente, pero su número de serie no coincide con la orden de baja, figura asignado aún al cliente/almacén del técnico, o no existe en la base de datos.
@@ -69,7 +81,7 @@
 
 ---
 
-## 6. Indicadores de Gestión (KPIs)
+## 7. Indicadores de Gestión (KPIs)
 
 * **Cantidad de Equipos Recuperados (CER):**
     * **Fórmula:** `Sumatoria total de unidades físicas recibidas en Almacén Devoluciones`
@@ -92,7 +104,7 @@
     * **Meta:** `Maximizar ahorro de capital`
 ---
 
-## 7. Historial de Control de Cambios
+## 8. Historial de Control de Cambios
 
 | Versión | Fecha | Descripción de la Modificación | Autor |
 | :--- | :--- | :--- | :--- |
