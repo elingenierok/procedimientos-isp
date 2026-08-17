@@ -18,7 +18,7 @@ graph LR
     classDef rol fill:#1f2428,stroke:#39ff14,stroke-width:1px,color:#c9d1d9,border-radius:5px;
 
     %% Liderazgo
-    GER["<b> Gerente de Suministros y Logística</b><br>Estrategia, Presupuesto (TCO) y KPIs"]:::gerencia
+    GER["<b>👑 Gerente de Suministros y Logística</b><br>Estrategia, Presupuesto (TCO) y KPIs"]:::gerencia
 
     %% Sub-Vertical 1
     subgraph SV1 ["🛒 1. Compras y Suministros"]
@@ -49,4 +49,3 @@ graph LR
     R_ASIS -.->|Interacción constante| SV2
     R_ASIS -.->|Interacción constante| SV3
     R_ASIS -.->|Interacción constante| SV4
-```
