@@ -15,8 +15,8 @@
     * Verificación y actualización del estado del equipo en los sistemas de gestión (Gestión Real) y plataformas tecnológicas (Smart OLT).
     * Reingreso del equipo al stock operativo (Almacén Principal) o disposición final por obsolescencia/daño (Almacén Descarte).
 * **Qué NO HACE:**
-    * Recepción de la solicitud de baja, retención y coordinación telefónica con el cliente (Responsabilidad de CAT).
-    * La visita al domicilio, desinstalación y el retiro físico del equipamiento (Responsabilidad de TEC).
+    * Recepción de la solicitud de baja, retención y coordinación telefónica con el cliente (Responsabilidad de CX-CAT).
+    * La visita al domicilio, desinstalación y el retiro físico del equipamiento (Responsabilidad de Técnico de retiro-CAT).
     * Cese de facturación y cierres de cuentas corrientes de clientes (Responsabilidad de Administración y Finanzas).
 
 ---
