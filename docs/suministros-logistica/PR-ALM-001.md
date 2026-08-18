@@ -44,7 +44,7 @@
 * **Regla de Entrega Formal (Exención por Vehículos / Descarga No Supervisada):** Suministros **únicamente** emitirá avisos de llegada y asumirá custodia de los insumos que hayan sido entregados físicamente en mano al personal de Suministros. Suministros **no rastreará, no notificará ni se hará responsable** por materiales, cajas o herramientas que queden dentro de vehículos de la flota (ej. tras regresar de una comisión) o en zonas comunes si no fueron entregados formalmente.
 * **Regla de Control Superficial (Otras Áreas):** Para paquetes de otros sectores, Suministros **solo responde** por la cantidad de bultos recibidos y la integridad estética externa al momento del ingreso.
 * **Regla de Aceptación Tácita y Exención de Responsabilidad:** Notificada la llegada del paquete, el Área Solicitante dispone de **24 horas hábiles** para revisar el contenido. Cumplido el plazo, el insumo se considerará "Aceptado", liberando a Suministros de cualquier responsabilidad por faltantes internos o daños ocultos.
-* **Regla de Autogestión de Reclamos:** Si al abrir el paquete el insumo de otra área presenta fallas, roturas internas o faltantes, **la gestión del reclamo ante el proveedor es responsabilidad exclusiva del Área Solicitante**. Suministros no realizará gestiones administrativas ni seguimiento.
+* **Regla de Autogestión de Reclamos:** Si al abrir el paquete el insumo de otra área presenta fallas, roturas internas o faltantes, **la gestión del reclamo ante el proveedor es responsabilidad exclusiva del Área Solicitante**. Suministros no realizará gestiones administrativas ni seguimiento. **[VER ESTE ALCANCE]**
 
 
 ## 4. Diagrama de Flujo del Proceso
