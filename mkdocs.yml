@@ -46,6 +46,7 @@ markdown_extensions:
 nav:
   - 🏠︎ Inicio: index.md
   - 📦 Procedimientos:
+      - 📦 PR-ALM-001 Recepción de Insumos: suministros-logistica/PR-ALM-001.md
       - 💰 PR-COM-001 Compras: suministros-logistica/PR-COM-001.md
       - 🔁 PR-REC-001 Recupero de Equipos: suministros-logistica/PR-REC-001.md
       - 👷 PR-PEDT-001 Pedidos Técnicos: suministros-logistica/PR-PEDT-001.md
@@ -56,3 +57,6 @@ nav:
           - PR-SCR-001 Disposición Final: suministros-logistica/PR-SCR-001.md
   - 🔍 Diagnósticos Técnicos:
       - 🧪 DG-EQU-001 Diagnóstico de equipos devueltos: diagnosticos/DG-EQU-001.md
+  - 📄 Plantillas Base:
+      - 📄 Procedimientos: plantilla-base.md
+      - 🧪 Diagnósticos: plantilla-diagnostico.md
