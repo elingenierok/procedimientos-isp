@@ -16,7 +16,7 @@
     * Seguimiento de entregas.
     * Gestión del fondo operativo exclusivo (caja chica) de Suministros y Logística (S&L) destinado al pago de envíos no previstos a sucursales.
 * **Qué NO HACE:**
-    * Recepción e inspección física/técnica del bien o equipo (corresponde al área solicitante/destinataria una vez arribada la mercancía).
+    * Recepción e inspección física/técnica del bien o equipo (corresponde al área solicitante una vez arribada la mercancía; ver [PR-ALM-001: Procedimiento de Recepción y Almacenamiento](PR-ALM-001.md)).
     * Registro de facturas, liquidaciones y pagos a proveedores (corresponde a Finanzas).
     * Administración de fondos corporativos (cajas de ahorro, tarjetas, cuentas o billeteras virtuales) para financiación o pago directo fuera del fondo de envíos de S&L.
     * Negociación, planes de pagos, opciones de pagos, cuotas, notas de crédito, gestiones aduaneras y arancelarias intervinientes.
