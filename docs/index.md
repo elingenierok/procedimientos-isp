@@ -9,7 +9,7 @@
 
 ## 🗺️ Mapa Operativo y Estructura de Roles
 
-A continuación, se detalla la estructura organizativa del área, liderada por la Gerencia y dividida en tres grandes verticales operativas.
+A continuación, se detalla la estructura organizativa del área, liderada por la Gerencia y dividida en tres grandes verticales operativas mas el vinvulo intersucursal.
 
 ```mermaid
 graph TD
@@ -18,7 +18,7 @@ graph TD
     classDef rol fill:#1f2428,stroke:#39ff14,stroke-width:1px,color:#c9d1d9,border-radius:5px;
 
     %% Liderazgo
-    GER["<b>👑 Gerente de Suministros y Logística</b><br>Estrategia, Presupuesto (TCO) y KPIs"]:::gerencia
+    GER["<b>🤝 Gerente de Suministros y Logística</b><br>Estrategia, Presupuesto (TCO) y KPIs"]:::gerencia
 
     %% Sub-Vertical 1
     subgraph SV1 ["🛒 1. Compras y Suministros"]
