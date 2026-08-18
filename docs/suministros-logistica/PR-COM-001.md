@@ -19,7 +19,7 @@
     * Recepción e inspección física/técnica del bien o equipo (corresponde al área solicitante una vez arribada la mercancía; ver [PR-ALM-001: Procedimiento de Recepción y Almacenamiento](PR-ALM-001.md)).
     * Registro de facturas, liquidaciones y pagos a proveedores (corresponde a Finanzas).
     * Administración de fondos corporativos (cajas de ahorro, tarjetas, cuentas o billeteras virtuales) para financiación o pago directo fuera del fondo de envíos de S&L.
-    * Negociación, planes de pagos, opciones de pagos, cuotas, notas de crédito, gestiones aduaneras y arancelarias intervinientes.
+    * Negociación, planes de pagos, opciones de pagos, cuotas, notas de crédito, gestiones aduaneras y arancelarias intervinientes. <mark>**[HOY LO HACE S&L]**</mark>
 
 ---
 
@@ -42,7 +42,7 @@
 
 ## 3. Reglas Operativas del Proceso
 
-* **Centralización de Compras:** Toda adquisición de insumos, equipos o servicios debe canalizarse a través de una SolPed en el ERP. Se prohíben las compras directas sin validación previa (*Maverick Buying*).
+* **Centralización de Compras:** Toda adquisición de insumos, equipos o servicios debe canalizarse a través de una SolPed en el ERP (Planificación de Recursos Empresariales). Se prohíben las compras directas sin validación previa <mark>**[VER DE UTILIZAR UN SOFT COMO EL DE RONALDO (RODRIGO)]**</mark>.
 * **Límite de Fondo S&L:** El fondo propio de Suministros y Logística está restringido exclusivamente a fletes urgentes a sucursales y requiere comprobante fiscal válido para su rendición ante Finanzas.
 * **Cuadro Comparativo:** Requisito obligatorio de 3 cotizaciones para evaluaciones comerciales, salvo casos justificados de Proveedor Único o Monopolio.
 
