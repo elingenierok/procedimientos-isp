@@ -59,7 +59,7 @@ graph TD
 
 ## ⚙️ Campos de Acción por Sub-Vertical Operativa
 
-### 👑 Liderazgo y Dirección General
+### 🤝 Liderazgo y Dirección General
 * **Roles Asignados:** Gerente de Suministros y Logística.
 * **Campo de Acción:**
     * Planificación estratégica del área, definición de objetivos y alineación operacional con la Dirección General.
