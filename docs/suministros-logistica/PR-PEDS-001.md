@@ -39,7 +39,7 @@
 ## 3. Reglas Operativas del Proceso
 
 * **Regla 1 / Criterio de Transporte:** Como norma general, todo envío no urgente debe programarse aprovechando los viajes de móviles propios de la empresa (directivos, técnicos en ruta, etc.). El pago de transporte externo (mensajería o encomienda) está restringido únicamente a situaciones de urgencia comprobada.
-* **Regla 2 / Punto de Pedido y Análisis de Consumo:** La revisión diaria del sistema activa alertas preventivas antes del quiebre de stock. Previo a generar una orden de compra mediante PR-COM-001, es obligatorio ejecutar un doble análisis:
+* **Regla 2 / Punto de Pedido y Análisis de Consumo:** La revisión diaria del sistema activa alertas preventivas antes del quiebre de stock. Previo a generar una orden de compra mediante  [PR-COM-001: Procedimiento General de Compras](PR-COM-001.md)), es obligatorio ejecutar un doble análisis:
     * **Redistribución entre sucursales:** Si una sucursal registra sobrante o stock inmovilizado de un insumo, se gestiona la transferencia directa entre sucursales antes de comprar nuevo material.
     * **Proyección de demanda:** Se evalúa la estacionalidad y el historial reciente de consumo; un pico eventual no justifica automáticamente una recompra del mismo volumen si la demanda futura proyecta una baja.
 * **Regla 3 / Trazabilidad de Inventario:** Ningún insumo o equipo puede salir del Almacén Principal sin su correspondiente comprobante de "Transferencia" emitido en el sistema. El stock permanecerá en estado "en tránsito" hasta la confirmación de la sucursal receptora.
