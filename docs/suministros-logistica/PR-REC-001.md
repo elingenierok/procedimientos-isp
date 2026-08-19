@@ -53,7 +53,7 @@ Este procedimiento interactúa y se complementa con la siguiente información do
 
 ## 5. Diagrama de Flujo del Proceso
 
-![Diagrama de Flujo de Recupero de Equipos](../img/FLUJO-PRUE.png)
+![Diagrama de Flujo de Recupero de Equipos](../img/FLUJO-REC-DIAG.png)
 
 ---
 
