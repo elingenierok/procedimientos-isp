@@ -1,6 +1,9 @@
 site_name: Obercom - Portal de Suministros y Logística
 site_description: Documentación oficial estandarizada de Obercom
 
+extra_css:
+  - stylesheets/extra.css
+
 theme:
   name: material
   language: es
