@@ -1,3 +1,7 @@
+<button onclick="window.print()" class="md-button md-button--primary btn-print" style="margin-bottom: 15px;">
+  🖨️ Imprimir / Descargar PDF
+</button>
+
 # DIAGNÓSTICO OPERATIVO: OPTIMIZACIÓN Y AUDITORÍA EN BANCO DE PRUEBAS (DIAG-ONU-001)
 
 **Área:** Suministros y Logística - Mantenimiento de Equipos | **Familia de Equipos:** ONUs GPON CATV (ZTE F6600R) | **Estado:** Aprobado / Diagnóstico Final | **Versión:** 1.0
