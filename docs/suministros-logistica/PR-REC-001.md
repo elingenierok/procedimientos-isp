@@ -49,7 +49,7 @@
 
 ## 4. Diagrama de Flujo
 
-![Diagrama de Flujo - Recupero de Equipos](../img/PR-REC/FLUJO-REC.png)
+![Diagrama de Flujo - Recupero de Equipos](../img/PR-REC/FLUJO-REC-DIAG.png)
 
 ---
 
