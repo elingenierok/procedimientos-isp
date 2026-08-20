@@ -1,6 +1,6 @@
 # Procedimiento General de Compras (PR-COM-001)
 
-**Norma ISO 9001:2015 - Cláusula 8.4** | **Estado:** Borrador Consolidado | **Versión:** 0.2 | **Fecha:** 07/08/2026
+**Norma ISO 9001:2015 - Cláusula 8.4** | **Estado:** Borrador Consolidado | **Versión:** 0.3 | **Fecha:** 20/08/2026
 
 ---
 
@@ -8,43 +8,40 @@
 
 **Objetivo:** Normar y centralizar la adquisición de bienes, equipos e insumos garantizando la calidad requerida, la optimización de costos y el cumplimiento de los plazos de entrega.
 
-* **Qué HACE:**
-    * Recepción y validación de Solicitudes de Pedidos (SolPed).
+* **Qué HACE (Alcance IN):**
+    * Recepción y análisis de Solicitudes de Pedido (SolPed).
     * Verificación de disponibilidad previa en almacén/inventario.
-    * Cotización con proveedores homologados (cuando la situación lo requiera) y selección de ofertas.
-    * Emisión y aprobación de Órdenes de Compra (OC).
-    * Seguimiento de entregas.
-    * Gestión del fondo operativo exclusivo (caja chica) de Suministros y Logística (S&L) destinado al pago de envíos no previstos a sucursales.
-* **Qué NO HACE:**
-    * Recepción e inspección física/técnica del bien o equipo (corresponde al área solicitante una vez arribada la mercancía; ver [PR-ALM-001: Procedimiento de Recepción y Almacenamiento](PR-ALM-001.md)).
-    * Registro de facturas, liquidaciones y pagos a proveedores (corresponde a Finanzas).
-    * Administración de fondos corporativos (cajas de ahorro, tarjetas, cuentas o billeteras virtuales) para financiación o pago directo fuera del fondo de envíos de S&L.
-    * Negociación, planes de pagos, opciones de pagos, cuotas, notas de crédito, gestiones aduaneras y arancelarias intervinientes. <mark>**[HOY LO HACE S&L]**</mark>
+    * Ruteo de requerimientos a áreas técnicas especializadas.
+    * Cotización con proveedores homologados y confección de cuadros comparativos.
+    * Emisión de Órdenes de Compra (OC) y seguimiento de entregas.
+    * Coordinación de envíos de insumos a sucursales (`PR-ENVS-001`).
+    * *Alcance Transitorio:* Gestión temporal de negociaciones comerciales, cuotas, notas de crédito y trámites aduaneros asumidos operativamente por S&L.
+* **Qué NO HACE (Alcance OUT):**
+    * Pruebas de funcionamiento y conformidad técnica del bien (corresponde al área solicitante; ver `PR-ALM-001`).
+    * Registro de facturas, liquidación y pago a proveedores (corresponde a Finanzas).
+    * Administración de instrumentos bancarios o billeteras virtuales corporativas.
 
 ---
 
 ## 2. Matriz RACI y Descripción de Pasos
 
-*(Premisa: Post aprobación de Finanzas de la disposición de dinero destinado para tal fin)*.
+*(Premisa: Post aprobación presupuestaria de Finanzas)*.
 
-| Paso del Proceso | Descripción y Criterio | Responsable (R) | Aprueba (A) | Consultado (C) | Informado (I) |
+| Etapa del Flujo | Descripción y Criterio | Responsable (R) | Aprueba (A) | Consultado (C) | Informado (I) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1. Recepción de SolPed** | Solicitud ingresada con justificación por el área de origen (Ingeniería, MKT, CAT, etc.). | Área Solicitante | Gerente del Área Solicitante | Compras | - |
-| **2. Ruteo Técnico y Stock** | Derivación del pedido a áreas especializadas (TI, DHO, Administración) y chequeo de existencias en almacén. | Compras | Jefe de Compras | Área Técnica Especializada | Área Solicitante |
-| **3. Cotización y Evaluación** | Análisis comercial/técnico. Gestión de ofertas y cuadro comparativo (o justificación de proveedor único/monopolio). | Compras | Gerente del Área Solicitante | Área Técnica | - |
-| **4. Fondo de Envíos S&L** | Gestión de pagos urgentes de fletes/envíos no previstos a sucursales con fondo propio asignado a S&L. | Compras | Jefe de Compras | - | Finanzas |
-| **5. Emisión y Firma de OC** | Generación de la OC adjuntando cuadro comparativo e informe técnico si aplica. | Compras | Gerencia Financiera / Dirección | Proveedor | Área Solicitante |
-| **6. Seguimiento de Entrega** | Control del plazo de entrega pactado con el proveedor (Lead Time comercial). | Compras | Jefe de Compras | Proveedor / Área Solicitante | - |
-| **7a. Recepción Física** | Control de empaque, cantidades e integridad externa visual al recibir el paquete/remito. | Compras | Jefe de Compras | Proveedor / Transporte | Área Solicitante |
-| **7b. Conformidad Técnica** | Pruebas de funcionamiento, verificación contra especificaciones e informe técnico. | Área Solicitante | Jefe del Área Solicitante | Compras | Finanzas (libera pago) |
+| **1. Registro / Solicitud** | Ingreso de SolPed en ERP y filtro inicial de informe técnico adjunto. | Área Solicitante | Gerente Solicitante | Compras | - |
+| **2. Ruteo / Direccionamiento** | Clasificación del pedido y derivación a Compras o Área Especializada. | Compras | Jefe de Compras | Área Especializada | Área Solicitante |
+| **3. Evaluación Técnica** | Verificación de stock en almacén. Si no hay, solicitud de cotizaciones. | Compras / Área Esp. | Finanzas *(Decisión financiera)* | Proveedor | Área Solicitante |
+| **4. Aprobaciones y Emisión OC** | Generación de OC con cuadro comparativo y confirmación de compra. | Compras | Gerencia Financiera | Proveedor | Área Solicitante |
+| **5. Entrega y Recepción Física** | Control visual, envío a sucursales (`PR-ENVS-001`), prueba de funcionamiento, cierre o reclamo (`PR-GREC-001`). | Área Solicitante (Pruebas) / Compras (Físico) | Gerente Solicitante | Compras | Finanzas *(libera pago)* |
 
 ---
 
 ## 3. Reglas Operativas del Proceso
 
-* **Centralización de Compras:** Toda adquisición de insumos, equipos o servicios debe canalizarse a través de una SolPed en el ERP (Planificación de Recursos Empresariales). Se prohíben las compras directas sin validación previa <mark>**[VER DE UTILIZAR UN SOFT COMO EL DE RONALDO (RODRIGO)]**</mark>.
-* **Límite de Fondo S&L:** El fondo propio de Suministros y Logística está restringido exclusivamente a fletes urgentes a sucursales y requiere comprobante fiscal válido para su rendición ante Finanzas.
-* **Cuadro Comparativo:** Requisito obligatorio de 3 cotizaciones para evaluaciones comerciales, salvo casos justificados de Proveedor Único o Monopolio.
+* **Centralización Obligatoria:** Toda adquisición debe gestionarse mediante SolPed formal en el ERP corporativo. Se prohíben las compras directas no autorizadas.
+* **Prioridad de Inventario:** Si el bien solicitado está disponible en almacén, se anula la compra externa y se gestiona entrega directa.
+* **Subprocesos Vinculados:** El despacho a sucursales se ejecuta bajo el procedimiento `PR-ENVS-001`. Todo rechazo en la prueba de funcionamiento deriva inmediatamente al procedimiento `PR-GREC-001`.
 
 ---
 
@@ -56,63 +53,27 @@
 
 ## 5. Gestión de Excepciones
 
-!!! failure "Paso 1: SolPed Incompleta o sin especificaciones"
-    **Escenario:** La SolPed no cuenta con el detalle técnico suficiente para cotizar.  
-    **Acción Correctiva:** Compras rechaza la solicitud en el ERP; el pedido vuelve a estado borrador al Área Solicitante.
-
-!!! warning "Paso 1: Falta de partida presupuestaria"
-    **Escenario:** El centro de costos no cuenta con saldo disponible.  
-    **Acción Correctiva:** El ERP bloquea la solicitud hasta que la Gerencia del Área reasigne fondos o tramite una ampliación de presupuesto.
-
-!!! note "Paso 2: Excepciones de Ruteo Técnico y Stock"
-    * **Demora del Área Técnica (>48 hs):** Alerta automática a Jefatura de la especialidad para destrabar la Ficha Técnica.
-    * **Disponibilidad en Almacén:** Si existe stock propio, se cancela la compra externa y se gestiona el envío directo mediante vale de salida.
-    * **Inviabilidad del bien solicitado:** El Área Técnica emite informe de discontinuidad y propone una alternativa homologada equivalente.
-
-!!! warning "Paso 3: Excepciones en Cotización y Evaluación"
-    * **Proveedor Único / Monopolio:** Compras completa la Ficha de Justificación previa confirmación del Área Solicitante.
-    * **Ofertas superan presupuesto:** Se tramita la autorización de sobrecosto con la Gerencia Solicitante antes de enviar a aprobación financiera.
-    * **Inconsistencia en el pedido:** Si Compras detecta que lo cotizado no cubre la necesidad, devuelve el expediente al Área Solicitante para reevaluar.
-
-!!! danger "Paso 4: Excepciones en Fondo de Envíos S&L"
-    * **Monto excede el límite:** Se anula la vía rápida de pago directo y se canaliza por el flujo regular (SolPed + OC) o autorización especial de Finanzas.
-    * **Falta de comprobante fiscal válido:** Compras rechaza el desembolso; no se rinden gastos sin factura formal. La unidad solicitante debe regularizar el monto directamente con Finanzas.
-
-!!! failure "Paso 5: Excepciones en Emisión de OC"
-    * **Proveedor altera condiciones:** Compras congela la OC. Se evalúa con Finanzas y el Solicitante si se continúa o se rescinde el acuerdo.
-    * **Rechazo de Gerencia Financiera:** Se cancela la OC en el ERP informando el motivo al Solicitante.
-
-!!! warning "Paso 6: Incumplimiento de Plazo (Lead Time)"
-    **Escenario:** El proveedor no entrega en la fecha pactada.  
-    **Acción Correctiva:** Compras emite reclamo formal. Si la demora supera los 5 días, se evalúa sanción en scoring o cambio de proveedor.
-
-!!! danger "Paso 7a: Recepción Física con Inconsistencias"
-    **Escenario:** Empaque dañado, abierto o faltante de mercadería al recibir.  
-    **Acción Correctiva:** Compras rechaza la recepción o firma el remito en disconformidad e inicia el reclamo logístico dentro de las 24 hs, notificando al Solicitante.
-
-!!! failure "Paso 7b: Rechazo en Conformidad Técnica"
-    **Escenario:** Falla de funcionamiento o incumplimiento de especificaciones en las pruebas del Solicitante.  
-    **Acción Correctiva:** El Solicitante emite Ticket de No Conformidad. Compras bloquea el pago en Finanzas e inicia garantía/devolución. Si ya se pagó, coordina reintegro, Nota de Crédito o sustitución.
+* **Falta de Información Técnica (Etapa 1):** Compras rechaza la SolPed y la reasigna al Área Solicitante para su completitud.
+* **Existencia en Almacén (Etapa 3):** Se frena la cotización externa y se emite vale de salida de inventario al Solicitante.
+* **Desviación Presupuestaria / Proveedor Único (Etapa 3):** Se exige ficha de justificación o aval de sobrecosto firmado por la Gerencia Solicitante.
+* **Inconsistencia en Recepción Física (Etapa 5):** Compras firma remito en disconformidad e inicia reclamo a la transportista/proveedor dentro de las 24 hs.
+* **Rechazo Técnico en Pruebas (Etapa 5):** El Solicitante emite Ticket de No Conformidad. Se activa el protocolo `PR-GREC-001` (Gestión de Reclamo de Insumo) para reemplazo, Nota de Crédito o reembolso.
 
 ---
 
 ## 6. Indicadores de Gestión (KPIs)
 
-* **Cumplimiento del Proveedor (OTIF - On Time In Full):**  
-  * **Fórmula:** `(Órdenes Entregadas a Tiempo y Completas / Total de OC Emitidas) × 100`  
-  * **Meta:** ≥ 90%
+**Métricas de Operación Directa (Flujograma):**
+* **Derivaciones Técnicas:** Nº de solicitudes derivadas a Áreas Especializadas.
+* **Respuesta de Proveedores:** Tiempo entre la solicitud de cotización y la respuesta comercial favorable.
+* **Lead Time de Aprobación:** Tiempo entre solicitud a Finanzas y confirmación de compra / emisión de OC.
+* **Efectividad de Envíos:** Tiempo entre emisión del remito y recepción del producto en sucursal (`PR-ENVS-001`).
 
-* **Lead Time del Proceso de Compras:**  
-  * **Fórmula:** `Fecha de Emisión de OC - Fecha de Aprobación de SolPed`  
-  * **Meta:** ≤ 2 días hábiles
-
-* **Tasa de Rechazo (Calidad de Recepción):**  
-  * **Fórmula:** `(Cantidad de Unidades Defectuosas / Total de Unidades Recibidas) × 100`  
-  * **Meta:** ≤ 2%
-
-* **Compras Fuera de Proceso (Maverick Buying):**  
-  * **Fórmula:** `(Número de Compras sin Validación / Total de Compras Realizadas) × 100`  
-  * **Meta:** ≤ 3%
+**KPIs Globales de Calidad ISO 9001:**
+* **Cumplimiento del Proveedor (OTIF):** `(OC Entregadas a Tiempo y Completas / Total OC) × 100` | **Meta:** ≥ 90%
+* **Lead Time de Compras:** `Fecha Emisión OC - Fecha Aprobación SolPed` | **Meta:** ≤ 2 días hábiles
+* **Tasa de Rechazo:** `(Unidades Defectuosas / Total Recibido) × 100` | **Meta:** ≤ 2%
+* **Compras Fuera de Proceso:** `(Compras sin Validación / Total Compras) × 100` | **Meta:** ≤ 3%
 
 ---
 
@@ -122,3 +83,4 @@
 | :--- | :--- | :--- | :--- |
 | 0.1 | 04/08/2026 | Estructuración inicial del borrador de compras | Suministros y Logística |
 | 0.2 | 07/08/2026 | Consolidación de matriz RACI, excepciones y diagrama de flujo matricial | Suministros y Logística |
+| 0.3 | 20/08/2026 | Alineación total con flujograma FLUJO-COM, integración de subprocesos y métricas operativas | Suministros y Logística |
