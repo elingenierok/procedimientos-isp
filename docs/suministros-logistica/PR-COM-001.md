@@ -1,3 +1,7 @@
+<button onclick="window.print()" class="md-button md-button--primary btn-print" style="margin-bottom: 15px;">
+  🖨️ Imprimir / Descargar PDF
+</button>
+
 # Procedimiento General de Compras (PR-COM-001)
 
 **Norma ISO 9001:2015 - Cláusula 8.4** | **Estado:** Borrador Consolidado | **Versión:** 0.3 | **Fecha:** 20/08/2026
