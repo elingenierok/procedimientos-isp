@@ -1,3 +1,7 @@
+<button onclick="window.print()" class="md-button md-button--primary btn-print" style="margin-bottom: 15px;">
+  🖨️ Imprimir / Descargar PDF
+</button>
+
 # Procedimiento de Recupero de Equipos (PR-REC-001)
 
 **Norma ISO 9001:2015 - Cláusulas 8.5 / 8.7** | **Estado:** Borrador de Trabajo | **Versión:** 0.1
