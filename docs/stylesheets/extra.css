@@ -53,6 +53,45 @@
   background-color: rgba(65, 182, 230, 0.08);
 }
 
+/* Reglas de Estilo para Impresión y Descarga PDF */
+@media print {
+  /* Ocultar elementos de la interfaz web */
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-nav,
+  .btn-print {
+    display: none !important;
+  }
+
+  /* Ajustar el contenido al 100% del ancho del papel */
+  .md-main__inner,
+  .md-content,
+  article {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Forzar fondo blanco y texto oscuro para ahorrar tinta */
+  body, .md-container {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Evitar que las tablas, cuadros de texto o bloques se corten a la mitad entre páginas */
+  table, pre, code, .admonition, .mermaid {
+    page-break-inside: avoid !important;
+  }
+
+  /* Forzar salto de página limpio en los títulos principales */
+  h1, h2 {
+    page-break-after: avoid !important;
+  }
+}
+
 /* Cajas de Alertas y Excepciones */
 .md-typeset .admonition {
   border-left-width: 4px;
