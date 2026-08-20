@@ -1,3 +1,7 @@
+<button onclick="window.print()" class="md-button md-button--primary btn-print" style="margin-bottom: 15px;">
+  🖨️ Imprimir / Descargar PDF
+</button>
+
 # PREPARADO Y DESPACHO DE PEDIDOS A SUCURSALES (PR-PEDS-001)
 
 **Norma ISO 9001:2015 - Cláusula 8.5.4 (Preservación del Producto)** | **Estado:** Borrador | **Versión:** 0.2
