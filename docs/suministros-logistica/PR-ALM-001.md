@@ -1,3 +1,6 @@
+<button onclick="window.print()" class="md-button md-button--primary btn-print" style="margin-bottom: 15px;">
+  🖨️ Imprimir / Descargar PDF
+</button>
 # Procedimiento de Recepción de Insumos y Paquetería General (PR-ALM-001)
 
 **Norma ISO 9001:2015** | **Estado:** Borrador Consolidado | **Versión:** 1.0 | **Fecha:** 18/08/2026
