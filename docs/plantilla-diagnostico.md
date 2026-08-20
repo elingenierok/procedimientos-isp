@@ -1,3 +1,7 @@
+<button onclick="window.print()" class="md-button md-button--primary btn-print" style="margin-bottom: 15px;">
+  🖨️ Imprimir / Descargar PDF
+</button>
+
 # [NOMBRE DEL DIAGNÓSTICO] ([CÓDIGO-000])
 
 **Familia de Equipos:** [e.g. ONUs GPON / Routers / Fusionadoras] | **Estado:** Borrador / Aprobado | **Versión:** 0.1
