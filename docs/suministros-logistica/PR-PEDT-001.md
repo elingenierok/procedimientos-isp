@@ -1,3 +1,7 @@
+<button onclick="window.print()" class="md-button md-button--primary btn-print" style="margin-bottom: 15px;">
+  🖨️ Imprimir / Descargar PDF
+</button>
+
 # Procedimiento de Preparado de Pedidos para Técnicos de Calle (PR-PEDT-001)
 
 **Norma ISO 9001:2015** | **Estado:** Borrador de Trabajo | **Versión:** 0.1 | **Fecha:** 04/08/2026
