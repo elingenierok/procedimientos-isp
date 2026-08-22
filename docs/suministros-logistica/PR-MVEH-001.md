@@ -17,6 +17,10 @@
     * Control documental integral de las unidades (VTV, seguro, matafuegos, cédula) y validación de licencias de conducir habilitantes.
     * Ejecución y auditoría de checklists de estado general, limpieza, herramientas e insumos a bordo (en coordinación con Mantenimiento de Equipos).
     * Monitoreo, registro y análisis del rendimiento de combustible por unidad (KPL) y declaración del estado de habilitación ("Apto" / "No Apto").
+    [VER Mantenimiento de flota de otras sucursales en caso de ser necesario]
+    [VER Coordinar servis en otra ciudad]
+[VER Accidentes o choques en via publica. como actuar]
+[VER Robo o extravio del vehiculo. Daño o Falla en operatividad]
 * **Qué NO HACE:**
     * Coordinación de cronogramas de viajes a sucursales, itinerarios o consolidación de cargas (corresponde a Coordinación Logística).
     * Asignación del personal o técnicos para realizar rutas de mantenimiento de red o instalaciones de clientes.
