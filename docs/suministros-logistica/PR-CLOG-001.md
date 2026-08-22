@@ -45,12 +45,15 @@
 * **[Regla 2 / Uso Exclusivo de Unidades Aptas]:** El Coordinador Logístico únicamente podrá programar viajes en vehículos que figuren con estatus verde ("Apto para Operar") en el tablero de Mantenimiento de Flota. Queda prohibida la asignación de móviles "En Taller" o con documentación vencida.
 * **[Regla 3 / Criterio de Consolidación de Carga]:** Ningún viaje interurbano saldrá a sucursales con una capacidad de carga inferior al 60%, salvo que transporte un insumo crítico para el restablecimiento del servicio de red.
 * **[Regla 4 / Trazabilidad Sistémica Obligatoria]:** Todo material, equipo o herramienta que suba a un vehículo para traslado debe contar con su correspondiente Remito de Transferencia generado en el sistema (Oberstock/SGR). Queda prohibido el traslado de materiales sin respaldo sistémico.
+
+---
+
 ## 4. Diagrama de Flujo
 
 ```mermaid
 graph TD;
     A[Recepción de Solicitud de Traslado / Envíos] --> B[Consolidación de Carga y Definición de Ruta];
-    B --> C{¿Móvil Asignado está "APTO" en Flota?};
+    B --> C{"¿Móvil Asignado está 'APTO' en Flota?"};
     C -- No --> D[Solicitar Reasignación / Habilitación a Gestor de Flota];
     D --> C;
     C -- Sí --> E[Carga de Materiales y Emisión de Remito Sistémico];
