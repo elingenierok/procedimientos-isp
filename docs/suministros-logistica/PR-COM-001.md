@@ -77,10 +77,14 @@
 * **Efectividad de Envíos:** Tiempo entre emisión del remito y recepción del producto en sucursal (`PR-ENVS-001`).
 
 **KPIs Globales de Calidad ISO 9001:**
-* **Cumplimiento del Proveedor (OTIF):** `(OC Entregadas a Tiempo y Completas / Total OC) × 100` | **Meta:** ≥ 90%
-* **Lead Time de Compras:** `Fecha Emisión OC - Fecha Aprobación SolPed` | **Meta:** ≤ 2 días hábiles
-* **Tasa de Rechazo:** `(Unidades Defectuosas / Total Recibido) × 100` | **Meta:** ≤ 2%
-* **Compras Fuera de Proceso:** `(Compras sin Validación / Total Compras) × 100` | **Meta:** ≤ 3%
+* **Cumplimiento del Proveedor (OTIF):**
+  * `(OC Entregadas a Tiempo y Completas / Total OC) × 100` | **Meta:** ≥ 90%
+* **Lead Time de Compras:**
+  * `Fecha Emisión OC - Fecha Aprobación SolPed` | **Meta:** ≤ 2 días hábiles
+* **Tasa de Rechazo:**
+  * `(Unidades Defectuosas / Total Recibido) × 100` | **Meta:** ≤ 2%
+* **Compras Fuera de Proceso:**
+  * `(Compras sin Validación / Total Compras) × 100` | **Meta:** ≤ 3%
 
 ---
 
