@@ -4,7 +4,7 @@
 
 # Procedimiento General de Compras (PR-COM-001)
 
-**Norma ISO 9001:2015 - Cláusula 8.4** | **Estado:** Borrador Consolidado | **Versión:** 0.3 | **Fecha:** 20/08/2026
+**Norma ISO 9001:2015 - Cláusula 8.4** | **Estado:** Borrador Consolidado | **Versión:** 0.4 | **Fecha:** 24/08/2026
 
 ---
 
@@ -18,12 +18,13 @@
     * Ruteo de requerimientos a áreas técnicas especializadas.
     * Cotización con proveedores homologados y confección de cuadros comparativos.
     * Emisión de Órdenes de Compra (OC) y seguimiento de entregas.
-    * Coordinación de envíos de insumos a sucursales (`PR-ENVS-001`).
+    * Coordinación y despacho de envíos de insumos a sucursales (`PR-ENVS-001`).
     * *Alcance Transitorio:* Gestión temporal de negociaciones comerciales, cuotas, notas de crédito y trámites aduaneros asumidos operativamente por S&L.
 * **Qué NO HACE (Alcance OUT):**
     * Pruebas de funcionamiento y conformidad técnica del bien (corresponde al área solicitante; ver `PR-ALM-001`).
     * Registro de facturas, liquidación y pago a proveedores (corresponde a Finanzas).
-    * Administración de instrumentos bancarios o billeteras virtuales corporativas.
+    * Administración de instrumentos bancarios, cuentas corporativas o billeteras virtuales.
+    * Intermediación o canalización de solicitudes de pago por fletes/envíos en destino (corresponde a la Sucursal en coordinación directa con Finanzas).
 
 ---
 
@@ -46,6 +47,7 @@
 * **Centralización Obligatoria:** Toda adquisición debe gestionarse mediante SolPed formal en el ERP corporativo. Se prohíben las compras directas no autorizadas.
 * **Prioridad de Inventario:** Si el bien solicitado está disponible en almacén, se anula la compra externa y se gestiona entrega directa.
 * **Subprocesos Vinculados:** El despacho a sucursales se ejecuta bajo el procedimiento `PR-ENVS-001`. Todo rechazo en la prueba de funcionamiento deriva inmediatamente al procedimiento `PR-GREC-001`.
+* **Despacho y Pago de Fletes en Destino:** En envíos que requieran pago contra entrega en sucursales, la responsabilidad de S&L finaliza al notificar el número de guía y transporte. La gestión del comprobante y la solicitud del desembolso económico se realiza **exclusivamente entre la Sucursal y Finanzas**, sin intermediación de Compras.
 
 ---
 
@@ -61,6 +63,7 @@
 * **Existencia en Almacén (Etapa 3):** Se frena la cotización externa y se emite vale de salida de inventario al Solicitante.
 * **Desviación Presupuestaria / Proveedor Único (Etapa 3):** Se exige ficha de justificación o aval de sobrecosto firmado por la Gerencia Solicitante.
 * **Inconsistencia en Recepción Física (Etapa 5):** Compras firma remito en disconformidad e inicia reclamo a la transportista/proveedor dentro de las 24 hs.
+* **Pago de Flete contra Entrega en Sucursal (Etapa 5 - `PR-ENVS-001`):** Al arribar una encomienda con cobro en destino, la Sucursal envía foto del comprobante/factura **directamente al canal oficial de Finanzas**. Compras/S&L no actúa como gestor ni intermediario de dicho pago.
 * **Rechazo Técnico en Pruebas (Etapa 5):** El Solicitante emite Ticket de No Conformidad. Se activa el protocolo `PR-GREC-001` (Gestión de Reclamo de Insumo) para reemplazo, Nota de Crédito o reembolso.
 
 ---
@@ -88,3 +91,4 @@
 | 0.1 | 04/08/2026 | Estructuración inicial del borrador de compras | Suministros y Logística |
 | 0.2 | 07/08/2026 | Consolidación de matriz RACI, excepciones y diagrama de flujo matricial | Suministros y Logística |
 | 0.3 | 20/08/2026 | Alineación total con flujograma FLUJO-COM, integración de subprocesos y métricas operativas | Suministros y Logística |
+| 0.4 | 24/08/2026 | Deslinde formal de S&L en la intermediación de pagos de fletes en destino (comunicación directa Sucursal-Finanzas) | Suministros y Logística |
