@@ -31,7 +31,7 @@ pie title Distribución de Costos y Envíos
 * **ITU (Ituzaingó):** 6 envíos (37 bultos) | **Ahorro:** $700.000 | *Gasto encomienda: $20.000*
 * **ELDO (Eldorado):** 6 envíos (17 bultos) | **Ahorro:** $320.000 | *Gasto encomienda: $20.000*
 * **SPD (San Pedro):** 3 envíos (15 bultos) | **Ahorro:** $300.000 | *Sin gasto externo*
-* **WND / WANDA:** 4 envíos (8 bultos) | **Ahorro:** $180.000 | *Sin gasto externo*
+* **WND (Wanda):** 4 envíos (8 bultos) | **Ahorro:** $180.000 | *Sin gasto externo*
 
 
 
