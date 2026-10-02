@@ -19,12 +19,11 @@
 
 ## 📊 Distribución de Costos y Envíos
 
-
-████████████████████ 97.4% Logística Propia ($1.500.000)
-
-█ 2.6% Encomiendas Externas ($40.000)
-
-
+```mermaid
+pie title Distribución de Costos y Envíos
+    "Logística Propia ($1.500.000)" : 1500000
+    "Encomiendas Externas ($40.000)" : 40000
+```
 
 
 ## 🏢 Desglose Operativo por Sucursal Destino
