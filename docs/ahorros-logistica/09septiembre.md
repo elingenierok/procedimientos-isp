@@ -21,6 +21,7 @@
 
 
 ████████████████████ 97.4% Logística Propia ($1.500.000)
+
 █ 2.6% Encomiendas Externas ($40.000)
 
 
