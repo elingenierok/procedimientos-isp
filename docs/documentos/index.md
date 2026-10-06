@@ -9,7 +9,7 @@
 
 | Documento / Asunto | Código | Acción |
 | :--- | :---: | :---: |
-| **Memorándum de Conformidad y Compromiso Operativo** | `MEMO-SUL-2026-01` | 👁️ [Abrir Vista Previa](Memorandum-Conformidad-Compromiso.pdf){: target="_blank" } |
+| **Memorándum de Conformidad y Compromiso Operativo** | `MEMO-SUL-2026-01` | 👁️ [Abrir Vista Previa](Memorandum-Conformidad-Compromiso.pdf) |
 | **Política de Asignación y Control de Flota** | `MEMO-SUL-2026-02` | 👁️ [Abrir Vista Previa](MEMO-SUL-2026-02.pdf){: target="_blank" } |
 
 ---
