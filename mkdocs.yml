@@ -66,10 +66,8 @@ nav:
       - 🧪 DG-EQU-001 Diagnóstico de equipos devueltos: diagnosticos/DG-EQU-001.md
   - 💵 Informes de Ahorro:
       - 📊 Ahorro en Logística Propia: ahorros-logistica/09septiembre.md
-  - 📚 Manuales y PDFs:
-      - 📄 Visor de Manuales: manuales/index.md
-  - 📋 Comunicaciones y Normativa:
-      - 📌 MEMO-SUL-2026-001 Política de Móviles: comunicaciones/MEMO-SUL-2026-001.md
+  - 📁 Documentos:
+      - 📄 Centro de Documentos y PDF: documentos/index.md
   - 📄 Plantillas Base:
       - 📄 Procedimientos: plantilla-base.md
       - 🧪 Diagnósticos: plantilla-diagnostico.md
