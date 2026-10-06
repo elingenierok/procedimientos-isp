@@ -15,8 +15,9 @@
 
 ## 📜 Protocolos y Normativas
 
-* 📑 <a href="Protocolo-Seguridad.pdf" target="_blank"><b>Protocolo de Seguridad para Trabajo en Frentes de Red</b></a>
-* 📑 <a href="Normativa-Herramientas.pdf" target="_blank"><b>Normativa de Control y Trazabilidad de Herramientas</b></a>
+* 📑 <a href="PROTOCOLO OPERATIVO.pdf" target="_blank"><b>Protocolo que define responsabilidades del encargado de depósito: control de stock, pedidos, recepción, organización, abastecimiento técnico y comunicación interna.
+</b></a>
+* 📑 <a href="ejemplo.pdf" target="_blank"><b>Ejemplo de documento</b></a>
 
 ---
 
