@@ -15,7 +15,7 @@
 
 ## 📜 Protocolos y Normativas
 
-* 📑 <a href="PROTOCOLO OPERATIVO.pdf" target="_blank"><b>Protocolo que define responsabilidades del encargado de depósito: control de stock, pedidos, recepción, organización, abastecimiento técnico y comunicación interna.
+* 📑 <a href="PROTOCOLO OPERATIVO.pdf" target="_blank"><b>Responsabilidades del depósito: stock, pedidos, mercadería, técnicos y comunicación.
 </b></a>
 * 📑 <a href="ejemplo.pdf" target="_blank"><b>Ejemplo de documento</b></a>
 
