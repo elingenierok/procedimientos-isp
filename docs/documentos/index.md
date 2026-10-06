@@ -1,7 +1,7 @@
-# 📁 Centro de Documentos y PDF
+# 📄 Centro de Documentos y PDF
 
 !!! info "Biblioteca de Documentos Oficiales"
-    A continuación puedes consultar o descargar la documentación en formato PDF.
+    A continuación puedes consultar o descargar la documentación oficial en formato PDF.
 
 ---
 
