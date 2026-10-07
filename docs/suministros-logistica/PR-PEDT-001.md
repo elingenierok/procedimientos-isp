@@ -4,7 +4,7 @@
 
 # Procedimiento de Preparado de Pedidos para Técnicos de Calle (PR-PEDT-001)
 
-**Norma ISO 9001:2015** | **Estado:** Borrador de Trabajo | **Versión:** 0.1 | **Fecha:** 04/08/2026
+**Norma ISO 9001:2015 - Cláusula 8.5** | **Estado:** Borrador de Trabajo | **Versión:** 0.1 | **Fecha:** 04/08/2026
 
 ---
 
@@ -28,23 +28,24 @@
 
 ## 2. Matriz RACI y Descripción de Pasos
 
-| Paso | Descripción de la Actividad | Responsable (R) | Aprueba (A) | Consultado (C) | Informado (I) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **1. Emisión del Pedido** | Ingreso de la Orden de Pedido en Oberstock respetando la ventana horaria según el turno del técnico. | TEC | TEC | - | ALM |
-| **2. Evaluación de Stock** | Revisión de lo solicitado en Oberstock y consulta del stock actual del TEC en SGR. Validación de topes, pertinencia e inventario en Almacén Principal. | ALM | ALM | - | TEC |
-| **3. Acopio y Escaneo** | Picking físico de materiales. Escaneo unitario obligatorio de MAC o Serial Number (SN) de los equipos. | ALM | ALM | TEC | - |
-| **4. Transferencia SGR** | Generación de la transferencia en SGR (Almacén Principal -> Almacén Móvil TEC). Registro de la ID de Transferencia dentro de Oberstock. | ALM | ALM | - | - |
-| **5. Staging y Cierre** | Depósito de insumos en el locker individual rotulado. Registro del N° de Locker en Oberstock y cierre formal de la orden. | ALM | ALM | - | TEC |
+| Paso / Actividad | Técnico (TEC) | Supervisión / Gerencia / CCT | Almacén (ALM) | Sistemas / Lockers |
+| :--- | :---: | :---: | :---: | :---: |
+| **1. Solicitud:** Emisión del pedido en Oberstock y verificación automática de ventana horaria. | **R** | - | **I** | **A** |
+| **2. Validación y Excepciones:** Autorización de pedidos fuera de régimen por CCT/CAT, auditoría de stock en SGR y ajuste de cantidades. | **I** | **A** | **R** | **C** |
+| **3. Acopio y Trazabilidad:** Picking físico, escaneo unitario obligatorio de MAC/SN y generación de transferencia sistémica en SGR. | - | - | **R / A** | **C** |
+| **4. Agrupación y Cierre:** Guardado en locker asignado, cierre formal en Oberstock, notificación y retiro por el técnico. | **R** | - | **A** | **I** |
 
-*Referencias de Roles:* **TEC:** Técnico de Calle | **ALM:** Personal de Almacén
+*Referencias de Leyenda RACI:* **R:** Responsable de ejecutar la actividad | **A:** Aprueba / Rinde cuentas | **C:** Consultado (aporta datos/sistemas) | **I:** Informado (recibe notificación/resultado)
+
+*Referencias de Roles:* **TEC:** Técnico de Calle | **Supervisión / Gerencia / CCT:** Encargado de Técnicos, CCT o Gerente de CAT | **ALM:** Personal de Almacén | **Sistemas / Lockers:** Plataforma Oberstock, SGR y lockers físicos.
 
 ---
 
 ## 3. Reglas Operativas y Cronograma de Preparación
 
 * **Régimen Estricto de Pedido por Horario:**
-    * **Técnicos de ingreso 7:30 AM:** Generan su pedido en Oberstock al finalizar la jornada del día hábil anterior.
-    * **Técnicos de ingreso 10:00 AM:** Generan su pedido al finalizar la jornada previa. El personal de Almacén procesa y arma sus pedidos dentro de la franja de 7:30 AM a 10:00 AM del mismo día.
+    * **Técnicos de ingreso 7:30 AM:** Generan su pedido en Oberstock dentro de la ventana ordinaria (hasta las 18:30 hs del día hábil anterior).
+    * **Técnicos de ingreso 10:00 AM:** Generan su pedido al finalizar su jornada previa (incluso si ingresa posteriormente a las 18:30 hs). El personal de Almacén procesa y arma sus pedidos dentro de la franja de 7:30 AM a 10:00 AM del mismo día de ingreso.
 * **Criterio de Evaluación de Stock:** ALM rechazará o ajustará las cantidades solicitadas si el sistema SGR indica que el TEC posee stock suficiente en su móvil, si el insumo no corresponde a su tarea/perfil, o ante desabastecimiento en Almacén Principal.
 * **Trazabilidad Unitaria (MAC/SN):** La lectura por scanner de cada MAC/SN es un requisito excluyente en el acopio para imputar el equipo al móvil del técnico y permitir su posterior descuento automático al instalarlo al cliente.
 
@@ -72,11 +73,11 @@
 
 !!! danger "Excepción 4a: Pedido fuera de régimen para técnicos propios de la empresa (Emergencias o Guardias)"
     **Escenario:** El técnico requiere materiales urgentes en un horario fuera de la ventana estipulada de armado o por fuerza mayor.  
-    **Acción Correctiva:** Requiere la validación previa del Encargado de Técnicos o Gerente de CAT. Sin dicha aprobación digital y formal, Almacén no procesa la orden. El pedido debe ser generado igualmente por Oberstock para su registro.
+    **Acción Correctiva:** Requiere la validación previa del CCT, Encargado de Técnicos o Gerente de CAT. Sin dicha aprobación digital y formal, Almacén no procesa la orden. El pedido debe ser generado igualmente por Oberstock para su registro.
 
 !!! danger "Excepción 4b: Pedido fuera de régimen para técnicos tercerizados"
     **Escenario:** El técnico requiere materiales urgentes en un horario fuera de la ventana estipulada de armado o por fuerza mayor.  
-    **Acción Correctiva:** Requiere la validación y autorización por parte del Gerente de CAT. Sin dicha aprobación digital y formal, Almacén no procesa la orden. El pedido debe ser generado igualmente por Oberstock para su registro.
+    **Acción Correctiva:** Requiere la validación y autorización por parte del CCT o Gerente de CAT. Sin dicha aprobación digital y formal, Almacén no procesa la orden. El pedido debe ser generado igualmente por Oberstock para su registro.
 
 ---
 
@@ -84,7 +85,7 @@
 
 * **Cantidad de Pedidos Mensuales:**
     * **Fórmula:** `Sumatoria total de pedidos realizados en el transcurso de 1 mes`
-    * **Meta:** `Seguimiento e información de gestión`
+    * **Meta:** `Informativa`
 
 * **Cantidad de Pedidos Fuera de Régimen o Urgentes:**
     * **Fórmula:** `Sumatoria de pedidos autorizados por fuera de la ventana horaria`
