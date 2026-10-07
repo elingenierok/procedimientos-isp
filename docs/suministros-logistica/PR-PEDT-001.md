@@ -4,7 +4,7 @@
 
 # Procedimiento de Preparado de Pedidos para Técnicos de Calle (PR-PEDT-001)
 
-**Norma ISO 9001:2015 - Cláusula 8.5** | **Estado:** Borrador de Trabajo | **Versión:** 0.1 | **Fecha:** 04/08/2026
+**Norma ISO 9001:2015 - Cláusula 8.5** | **Estado:** Borrador de Trabajo | **Versión:** 0.2 | **Fecha:** 07/10/2026
 
 ---
 
@@ -31,9 +31,9 @@
 | Paso / Actividad | Técnico (TEC) | Supervisión / Gerencia / CCT | Almacén (ALM) | Sistemas / Lockers |
 | :--- | :---: | :---: | :---: | :---: |
 | **1. Solicitud:** Emisión del pedido en Oberstock y verificación automática de ventana horaria. | **R** | - | **I** | **A** |
-| **2. Validación y Excepciones:** Autorización de pedidos fuera de régimen por CCT/CAT, auditoría de stock en SGR y ajuste de cantidades. | **I** | **A** | **R** | **C** |
-| **3. Acopio y Trazabilidad:** Picking físico, escaneo unitario obligatorio de MAC/SN y generación de transferencia sistémica en SGR. | - | - | **R / A** | **C** |
-| **4. Agrupación y Cierre:** Guardado en locker asignado, cierre formal en Oberstock, notificación y retiro por el técnico. | **R** | - | **A** | **I** |
+| **2. Validación y Excepciones:** Autorización de pedidos fuera de régimen por CCT/CAT, auditoría de stock en SGR y ajuste de cantidades. | **I** | **A** | **R** | - |
+| **3. Acopio y Trazabilidad:** Picking físico, escaneo unitario obligatorio de MAC/SN y generación de transferencia sistémica en SGR. | - | - | **R / A** | - |
+| **4. Agrupación y Cierre:** Guardado en locker asignado, cierre formal en Oberstock, notificación y retiro por el técnico. | **R** | - | **A** | -|
 
 *Referencias de Leyenda RACI:* **R:** Responsable de ejecutar la actividad | **A:** Aprueba / Rinde cuentas | **C:** Consultado (aporta datos/sistemas) | **I:** Informado (recibe notificación/resultado)
 
@@ -102,3 +102,4 @@
 | Versión | Fecha | Descripción de la Modificación | Autor |
 | :--- | :--- | :--- | :--- |
 | 0.1 | 04/08/2026 | Confección del borrador inicial del procedimiento | Almacén / Suministros y Logística |
+| 0.2 | 07/10/2026 | Alineación con Memorándum Operativo: ajuste de roles aprobadores (CCT/CAT) y aclaración de ventanas de armado según turno | Almacén / Suministros y Logística |
