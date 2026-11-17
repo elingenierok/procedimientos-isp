@@ -18,8 +18,10 @@ flowchart TD
     DecCorresponde -->|"SÍ"| AudAprueba["AUDITOR<br>Valida/ajusta modelo y aprueba pedido"]
     AudAprueba --> DecStock{"¿Tiene stock propio?"}
 
-    DecStock -->|"SÍ"| FinES(["ENTREGA DE STOCK (ES)<br>(Fin)"])
+    DecStock -->|"SÍ"| EntregaStock["ENTREGA DE STOCK (ES)"]
     DecStock -->|"NO"| PasaSC["Pasa a Solicitud de Compra (SC)"]
+
+    EntregaStock --> RevisionConjunta
 
     PasaSC --> SumCotiza["SUMINISTROS (Gestión SC)<br>Cotiza con PROVEEDORES (costos, plazos, medios de pago)<br>+ Recomendación técnica opc. (Suministros o Auditor)"]
     SumCotiza --> FinanzasAprueba["FINANZAS<br>Define mejor opción de compra/pago y da aprobación final"]
