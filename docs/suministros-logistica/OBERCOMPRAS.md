@@ -1,3 +1,6 @@
+# Flujo de Compras - OBERCOM
+
+```mermaid
 flowchart TD
     Inicio(["ÁREA SOLICITANTE<br>Crea Solicitud de Necesidad (SN)"]) --> Sum1["SUMINISTROS (Gestor)<br>Verifica y asigna según rubro"]
 
@@ -38,3 +41,4 @@ flowchart TD
     DecConforme -->|"SÍ"| FinOk(["FINALIZADO<br>(Fin)"])
     DecConforme -->|"NO (Disconforme)"| Disconformidad["No se acepta el insumo<br>Se analiza discrepancia (Reclamo a proveedor / cambio)"]
     Disconformidad --> SiguienteEtapa(["Siguiente etapa..."])
+```
